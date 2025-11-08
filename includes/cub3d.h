@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:21 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/05 15:34:46 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/08 15:59:10 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,12 @@ typedef	struct s_mlx
 typedef	struct s_map
 {
 	char	**map;
+	int		tab[6];
 }	t_map;
 
 /* PARSING */
-int		check_file_extension(char *str);
+int		check_file_extension(char *str, char *extension);
+int		check_map_file(t_map *data);
 char	*read_map(char *file);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 16:16:41 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/05 15:42:19 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/08 16:04:14 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	check_new_line(char *map)
 	return (1);
 }
 
-int	check_file_extension(char *str)
+int	check_file_extension(char *str, char *extension)
 {
 	size_t	i;
 
@@ -38,7 +38,7 @@ int	check_file_extension(char *str)
 		i++;
 	while (i > 0 && str[i] != '.')
 		i--;
-	if (ft_strncmp(&str[i], ".cub", 5) == 0)
+	if (ft_strncmp(&str[i], extension, 5) == 0)
 		return (1);
 	return (0);
 }
@@ -88,11 +88,11 @@ char	*read_map(char *file)
 	if (line)
 		map = read_map_content(fd, map, line);
 	close(fd);
-	if (!check_new_line(map))
-	{
-		free(map);
-		write (2, "consecutive newlines\n", 21);
-		exit(1);
-	}
+	// if (!check_new_line(map))
+	// {
+	// 	free(map);
+	// 	write (2, "consecutive newlines\n", 21);
+	// 	exit(1);
+	// }
 	return (map);
 }
