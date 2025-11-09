@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:21 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/08 15:59:10 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/09 19:56:02 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,24 @@ typedef	struct s_mlx
 	void	*win_ptr;
 }	t_mlx ;
 
+typedef struct s_textures
+{
+	char	*NO;
+	char	*SO;
+	char	*WE;
+	char	*EA;
+}	t_textures;
+
 typedef	struct s_map
 {
-	char	**map;
-	int		tab[6];
+	char		**map;
+	int			tab[6];
+	t_textures	*textures;
 }	t_map;
 
 /* PARSING */
 int		check_file_extension(char *str, char *extension);
-int		check_map_file(t_map *data);
+int		check_map_file(t_map *data, t_textures *textures);
 char	*read_map(char *file);
 
 #endif

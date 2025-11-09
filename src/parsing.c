@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 16:16:41 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/08 16:04:14 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/09 17:14:21 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,11 +88,5 @@ char	*read_map(char *file)
 	if (line)
 		map = read_map_content(fd, map, line);
 	close(fd);
-	// if (!check_new_line(map))
-	// {
-	// 	free(map);
-	// 	write (2, "consecutive newlines\n", 21);
-	// 	exit(1);
-	// }
 	return (map);
 }
