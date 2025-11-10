@@ -6,13 +6,13 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 15:57:57 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/09 20:10:16 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/10 17:51:07 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int	check_textures(t_map *data, char *flag)
+int	check_textures(t_map *data, char *flag, int j)
 {
 	char	*trim;
 	int	i;
@@ -23,9 +23,16 @@ int	check_textures(t_map *data, char *flag)
 	while (data->map[i])
 	{
 		trim = ft_strtrim(data->map[i], " \t\n");
-		// printf("%s\n", trim);
-		if (ft_strstr(trim, flag) != NULL && check_file_extension(trim, ".xpm"))
+		if (!trim)
+		{
+			i++;
+			continue ;
+		}
+		if (j == 3 && ft_strncmp(trim, flag, j) == 0 && ft_strstr(trim, ".xpm") != NULL)
 			k++;
+		else if (j == 2 && ft_strncmp(trim, flag, j) == 0)
+			k++;
+		free(trim);
 		if (k > 1)
 			return (0);
 		i++;
@@ -67,24 +74,197 @@ int	store_textures(t_map *data, t_textures *textures)
 			j++;
 		}
 		i++;
+		free(trim);
 	}
 	if (j == 4)
 		return (1);
 	return (0);
 }
 
+void	copy_textures(t_textures *textures, char **tab, int i)
+{
+	if (i == 0)
+	{
+		textures->floor_tab[0] = ft_atoi(tab[0]);
+		textures->floor_tab[1] = ft_atoi(tab[1]);
+		textures->floor_tab[2] = ft_atoi(tab[2]);
+		free_tab(tab);
+	}
+	if (i == 1)
+	{
+		textures->ceiling_tab[0] = ft_atoi(tab[0]);
+		textures->ceiling_tab[1] = ft_atoi(tab[1]);
+		textures->ceiling_tab[2] = ft_atoi(tab[2]);
+		free_tab(tab);
+	}
+}
+
+int	store_rgb(t_map *data, t_textures *textures)
+{
+	int i;
+	int	j;
+	char *trim;
+	char *tmp;
+	char **tab;
+
+	i = 0;
+	j = 0;
+	while (data->map[i])
+	{
+		trim = ft_strtrim(data->map[i], " \t\n");
+		if (!trim)
+		{
+			i++;
+			continue ;
+		}
+		if (ft_strstr(trim, "F ") != NULL)
+		{
+			tmp = trim + 2;
+			tab = ft_split(tmp, ',');
+			copy_textures(textures, tab, 0);
+			j++;
+		}
+		else if (ft_strstr(trim, "C ") != NULL)
+		{
+			tmp = trim + 2;
+			tab = ft_split(tmp, ',');
+			copy_textures(textures, tab, 1);
+			j++;
+		}
+		free(trim);
+		i++;
+	}
+	if (j == 2)
+		return (1);
+	return (0);
+}
+
+int	is_map_line(char *line)
+{
+    int	i;
+
+    if (!line || ft_strlen(line) == 0)
+        return (0);
+    i = 0;
+    while (line[i])
+    {
+        if (line[i] != '1' && line[i] != '0' && line[i] != 'N' && line[i] != 'S' \
+			&& line[i] != 'E' && line[i] != 'W' && line[i] != ' ' \
+			&& line[i] != '\t' && line[i] != '\n')
+            return (0);
+        i++;
+    }
+    return (1);
+}
+
+int	find_map_start(t_map *data)
+{
+	int	i;
+	int	j;
+	char	*trim;
+
+	i = 0;
+	j = 0;
+	while (data->map[i])
+	{
+		trim = ft_strtrim(data->map[i], " \t\n");
+		if (ft_strncmp(trim, "NO ", 3) == 0 || ft_strncmp(trim, "SO ", 3) == 0 || \
+            ft_strncmp(trim, "WE ", 3) == 0 || ft_strncmp(trim, "EA ", 3) == 0 || \
+            ft_strncmp(trim, "F ", 2) == 0 || ft_strncmp(trim, "C ", 2) == 0)
+		{
+			free(trim);
+			i++;
+			continue;
+		}
+		if (ft_strlen(trim) == 0)
+		{
+			free(trim);
+			i++;
+			continue;
+		}
+		if (is_map_line(trim))
+		{
+			// printf("trim: %s\n", trim);
+			return (free(trim), i);
+		}
+		free(trim);
+		i++;
+	}
+	return (0);
+}
+
+int	check_walls(t_map *data)
+{
+	int	map_start;
+	int	map_end;
+	char	*trim;
+	int	i;
+	int j;
+
+	map_start = find_map_start(data);
+	// printf("map start %s\n", data->map[map_start]);
+	map_end = map_start;
+	while (data->map[map_end] && is_map_line(data->map[map_end]))
+		map_end++;
+	map_end--;
+	i = map_start;
+	while (i <= map_end)
+	{
+		trim = ft_strtrim(data->map[i], " \t\n");
+		if (!trim || ft_strlen(trim) == 0)
+        {
+            if (trim)
+                free(trim);
+            i++;
+            continue;
+        }
+		if (i == map_start || i == map_end)
+		{
+			j = 0;
+			while (trim[j])
+			{
+				if (trim[j] != '1' && trim[j] != ' ')
+					return (free(trim), 0);
+				j++;
+			}
+		}
+		else
+        {
+            if ((trim[0] != '1' && trim[0] != ' ') || (trim[ft_strlen(trim) - 1] != '1' && trim[ft_strlen(trim) - 1] != ' '))
+                return (free(trim), 0);
+        }
+		free(trim);
+		i++;
+	}
+	return (1);
+}
+
 int	check_map_file(t_map *data, t_textures *textures)
 {
-	if (!check_textures(data, "NO") || !check_textures(data, "SO") || \
-	!check_textures(data, "WE") || !check_textures(data, "EA") || \
-	!check_textures(data, "F") || !check_textures(data, "C"))
-		printf("e");
+	if (!check_textures(data, "NO ", 3) || !check_textures(data, "SO ", 3) || \
+	!check_textures(data, "WE ", 3) || !check_textures(data, "EA ", 3) || \
+	!check_textures(data, "F ", 2) || !check_textures(data, "C ", 2))
+		return (0);
 	if (!store_textures(data, textures))
 		return (0);
 	printf("%s\n", textures->NO);
 	printf("%s\n", textures->SO);
 	printf("%s\n", textures->WE);
 	printf("%s\n", textures->EA);
+	if (!store_rgb(data, textures))
+		return (0);
+	printf("%d\n", textures->floor_tab[0]);
+	printf("%d\n", textures->floor_tab[1]);
+	printf("%d\n", textures->floor_tab[2]);
+	printf("%d\n", textures->ceiling_tab[0]);
+	printf("%d\n", textures->ceiling_tab[1]);
+	printf("%d\n", textures->ceiling_tab[2]);
+	if (!check_walls(data))
+		return (0);
 	printf("ci bon\n");
 	return (1);
 }
+
+/*
+rgb entre 0 et 255
+*/

@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:21 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/09 19:56:02 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/10 14:51:11 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ typedef struct s_textures
 	char	*SO;
 	char	*WE;
 	char	*EA;
+	int		floor_tab[3];
+	int		ceiling_tab[3];
 }	t_textures;
 
 typedef	struct s_map
@@ -45,5 +47,10 @@ typedef	struct s_map
 int		check_file_extension(char *str, char *extension);
 int		check_map_file(t_map *data, t_textures *textures);
 char	*read_map(char *file);
+
+/* UTILS */
+void	free_tab(char **tab);
+void	init_textures(t_textures *textures);
+void	free_textures(t_textures *textures);
 
 #endif
