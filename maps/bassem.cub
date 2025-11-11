@@ -1,10 +1,21 @@
-NO textures/bassem1.xpm
+WE textures/aaaaaaaaaaaaaaaaaaaaaaaaa.xpm
 SO textures/bassemallerftg.xpm
-WE textures/bassemdemon.xpm
+
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+
+
+NO textures/bassem1.xpm
 EA textures/bassemelephant.xpm
 
 F 234,231,52
-C 32,64,0
+C 32,64,255
 
 111111111111111
 110100000001001

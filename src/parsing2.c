@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 15:57:57 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/11 14:26:47 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/11 17:14:44 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	check_textures(t_map *data, char *flag, int j)
 			i++;
 			continue ;
 		}
-		if (j == 3 && ft_strncmp(trim, flag, j) == 0 && ft_strstr(trim, ".xpm") != NULL)
+		if (j == 2 && ft_strncmp(trim, flag, j) == 0 && ft_strstr(trim, ".xpm") != NULL)
 			k++;
-		else if (j == 2 && ft_strncmp(trim, flag, j) == 0)
+		else if (j == 1 && ft_strncmp(trim, flag, j) == 0)
 			k++;
 		free(trim);
 		if (k > 1)
@@ -164,8 +164,12 @@ int	check_walls(t_map *data)
 
 	map_start = find_map_start(data);
 	map_end = map_start;
-	while (data->map[map_end] && is_map_line(data->map[map_end]))
+	while (data->map[map_end])
+	{
+		if (!is_map_line(data->map[map_end]))
+			return (0);
 		map_end++;
+	}
 	map_end--;
 	i = map_start;
 	while (i <= map_end)
@@ -212,30 +216,35 @@ int	check_rgb(t_textures *textures)
 	return (1);
 }
 
-int	check_map_file(t_map *data, t_textures *textures)
+// int	check_access(t_textures *textures)
+// {
+// 	if (mlx_xpm_file_to_image(textures->mlx->mlx_ptr, textures->SO, 0, 0) == NULL || \
+// 		mlx_xpm_file_to_image(textures->mlx->mlx_ptr, textures->EA, 0, 0) == NULL || \
+// 		mlx_xpm_file_to_image(textures->mlx->mlx_ptr, textures->NO, 0, 0) == NULL || \
+// 		mlx_xpm_file_to_image(textures->mlx->mlx_ptr, textures->WE, 0, 0) == NULL)
+// 		return (0);
+// 	return (1);
+// }
+
+int	check_map_file(t_map *data, t_textures *textures, t_mlx *mlx)
 {
-	if (!check_textures(data, "NO ", 3) || !check_textures(data, "SO ", 3) || \
-	!check_textures(data, "WE ", 3) || !check_textures(data, "EA ", 3) || \
-	!check_textures(data, "F ", 2) || !check_textures(data, "C ", 2))
-		return (0);
-	if (!store_textures(data, textures))
+	(void)mlx;
+	if (!check_textures(data, "NO", 2) || !check_textures(data, "SO", 2) || \
+	!check_textures(data, "WE", 2) || !check_textures(data, "EA", 2) || \
+	!check_textures(data, "F", 1) || !check_textures(data, "C", 1) || \
+	!store_textures(data, textures) || !store_rgb(data, textures) || \
+	!check_rgb(textures) || !check_walls(data))
 		return (0);
 	printf("%s\n", textures->NO);
 	printf("%s\n", textures->SO);
 	printf("%s\n", textures->WE);
 	printf("%s\n", textures->EA);
-	if (!store_rgb(data, textures))
-		return (0);
-	if (!check_rgb(textures))
-		return (0);
 	printf("%d\n", textures->floor_tab[0]);
 	printf("%d\n", textures->floor_tab[1]);
 	printf("%d\n", textures->floor_tab[2]);
 	printf("%d\n", textures->ceiling_tab[0]);
 	printf("%d\n", textures->ceiling_tab[1]);
 	printf("%d\n", textures->ceiling_tab[2]);
-	if (!check_walls(data))
-		return (0);
 	printf("ci bon\n");
 	return (1);
 }
