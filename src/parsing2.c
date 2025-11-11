@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 15:57:57 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/10 17:51:07 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/11 14:26:47 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,24 +81,6 @@ int	store_textures(t_map *data, t_textures *textures)
 	return (0);
 }
 
-void	copy_textures(t_textures *textures, char **tab, int i)
-{
-	if (i == 0)
-	{
-		textures->floor_tab[0] = ft_atoi(tab[0]);
-		textures->floor_tab[1] = ft_atoi(tab[1]);
-		textures->floor_tab[2] = ft_atoi(tab[2]);
-		free_tab(tab);
-	}
-	if (i == 1)
-	{
-		textures->ceiling_tab[0] = ft_atoi(tab[0]);
-		textures->ceiling_tab[1] = ft_atoi(tab[1]);
-		textures->ceiling_tab[2] = ft_atoi(tab[2]);
-		free_tab(tab);
-	}
-}
-
 int	store_rgb(t_map *data, t_textures *textures)
 {
 	int i;
@@ -139,24 +121,6 @@ int	store_rgb(t_map *data, t_textures *textures)
 	return (0);
 }
 
-int	is_map_line(char *line)
-{
-    int	i;
-
-    if (!line || ft_strlen(line) == 0)
-        return (0);
-    i = 0;
-    while (line[i])
-    {
-        if (line[i] != '1' && line[i] != '0' && line[i] != 'N' && line[i] != 'S' \
-			&& line[i] != 'E' && line[i] != 'W' && line[i] != ' ' \
-			&& line[i] != '\t' && line[i] != '\n')
-            return (0);
-        i++;
-    }
-    return (1);
-}
-
 int	find_map_start(t_map *data)
 {
 	int	i;
@@ -183,10 +147,7 @@ int	find_map_start(t_map *data)
 			continue;
 		}
 		if (is_map_line(trim))
-		{
-			// printf("trim: %s\n", trim);
 			return (free(trim), i);
-		}
 		free(trim);
 		i++;
 	}
@@ -202,7 +163,6 @@ int	check_walls(t_map *data)
 	int j;
 
 	map_start = find_map_start(data);
-	// printf("map start %s\n", data->map[map_start]);
 	map_end = map_start;
 	while (data->map[map_end] && is_map_line(data->map[map_end]))
 		map_end++;
@@ -239,6 +199,19 @@ int	check_walls(t_map *data)
 	return (1);
 }
 
+int	check_rgb(t_textures *textures)
+{
+	if ((textures->floor_tab[0] < 0 || textures->floor_tab[0] > 255) || \
+		(textures->floor_tab[1] < 0 || textures->floor_tab[1] > 255) || \
+		(textures->floor_tab[2] < 0 || textures->floor_tab[2] > 255))
+		return (0);
+	if ((textures->ceiling_tab[0] < 0 || textures->ceiling_tab[0] > 255) || \
+		(textures->ceiling_tab[1] < 0 || textures->ceiling_tab[1] > 255) || \
+		(textures->ceiling_tab[2] < 0 || textures->ceiling_tab[2] > 255))
+		return (0);
+	return (1);
+}
+
 int	check_map_file(t_map *data, t_textures *textures)
 {
 	if (!check_textures(data, "NO ", 3) || !check_textures(data, "SO ", 3) || \
@@ -252,6 +225,8 @@ int	check_map_file(t_map *data, t_textures *textures)
 	printf("%s\n", textures->WE);
 	printf("%s\n", textures->EA);
 	if (!store_rgb(data, textures))
+		return (0);
+	if (!check_rgb(textures))
 		return (0);
 	printf("%d\n", textures->floor_tab[0]);
 	printf("%d\n", textures->floor_tab[1]);

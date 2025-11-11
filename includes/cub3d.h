@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:21 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/10 14:51:11 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/11 13:57:27 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,7 @@ char	*read_map(char *file);
 void	free_tab(char **tab);
 void	init_textures(t_textures *textures);
 void	free_textures(t_textures *textures);
+int		is_map_line(char *line);
+void	copy_textures(t_textures *textures, char **tab, int i);
 
 #endif
