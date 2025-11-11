@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 16:16:41 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/09 17:14:21 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/11 14:30:10 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	check_file_extension(char *str, char *extension)
 		i++;
 	while (i > 0 && str[i] != '.')
 		i--;
-	if (ft_strncmp(&str[i], extension, 5) == 0)
+	if (ft_strncmp(&str[i], extension, 4) == 0)
 		return (1);
 	return (0);
 }
