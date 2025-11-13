@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 15:57:57 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/11 17:14:44 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/13 16:40:51 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -226,9 +226,8 @@ int	check_rgb(t_textures *textures)
 // 	return (1);
 // }
 
-int	check_map_file(t_map *data, t_textures *textures, t_mlx *mlx)
+int	check_map_file(t_map *data, t_textures *textures)
 {
-	(void)mlx;
 	if (!check_textures(data, "NO", 2) || !check_textures(data, "SO", 2) || \
 	!check_textures(data, "WE", 2) || !check_textures(data, "EA", 2) || \
 	!check_textures(data, "F", 1) || !check_textures(data, "C", 1) || \

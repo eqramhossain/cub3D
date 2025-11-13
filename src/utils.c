@@ -6,18 +6,19 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:50:46 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/11 17:01:42 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/13 16:42:58 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	init_textures(t_textures *textures)
+void	init_textures(t_textures *textures, t_map *data)
 {
 	textures->EA = NULL;
 	textures->NO = NULL;
 	textures->SO = NULL;
 	textures->WE = NULL;
+	data->textures = textures;
 }
 
 void	free_textures(t_textures *textures)
