@@ -6,7 +6,7 @@
 #    By: egerin <egerin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 13:37:08 by egerin            #+#    #+#              #
-#    Updated: 2025/11/10 17:30:48 by egerin           ###   ########.fr        #
+#    Updated: 2025/11/13 16:47:37 by egerin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ CFLAGS = -Wall -Wextra -Werror -g3 -I${LIBFT} -Iincludes -I${MLX_DIR}
 MLX_FLAGS = -Lminilibx-linux -lmlx -lX11 -lXext -lm
 LDFLAGS = -L${LIBFT_DIR} -lft
 
-SRC_FILES = src/main.c src/parsing.c src/parsing2.c src/utils.c
+SRC_FILES = src/main.c src/parsing.c src/parsing2.c src/utils.c src/sprites.c
 SRC = $(SRC_FILES)
 OBJ = $(SRC:.c=.o)
 
