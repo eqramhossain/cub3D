@@ -6,18 +6,20 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 15:57:57 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/13 16:40:51 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/14 16:22:35 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int	check_textures(t_map *data, char *flag, int j)
+int	check_textures(t_data *data, char *flag, int j)
 {
 	char	*trim;
 	int	i;
 	int k;
 
+	if (!data || !data->map)
+        return (0);
 	k = 0;
 	i = 0;
 	while (data->map[i])
@@ -42,7 +44,7 @@ int	check_textures(t_map *data, char *flag, int j)
 	return (1);
 }
 
-int	store_textures(t_map *data, t_textures *textures)
+int	store_textures(t_data *data, t_textures *textures)
 {
 	char *trim;
 	int	i;
@@ -81,7 +83,7 @@ int	store_textures(t_map *data, t_textures *textures)
 	return (0);
 }
 
-int	store_rgb(t_map *data, t_textures *textures)
+int	store_rgb(t_data *data, t_textures *textures)
 {
 	int i;
 	int	j;
@@ -121,7 +123,7 @@ int	store_rgb(t_map *data, t_textures *textures)
 	return (0);
 }
 
-int	find_map_start(t_map *data)
+int	find_map_start(t_data *data)
 {
 	int	i;
 	int	j;
@@ -154,25 +156,23 @@ int	find_map_start(t_map *data)
 	return (0);
 }
 
-int	check_walls(t_map *data)
+int	check_walls(t_data *data)
 {
-	int	map_start;
-	int	map_end;
 	char	*trim;
 	int	i;
 	int j;
 
-	map_start = find_map_start(data);
-	map_end = map_start;
-	while (data->map[map_end])
+	data->map_start = find_map_start(data);
+	data->map_end = data->map_start;
+	while (data->map[data->map_end])
 	{
-		if (!is_map_line(data->map[map_end]))
+		if (!is_map_line(data->map[data->map_end]))
 			return (0);
-		map_end++;
+		data->map_end++;
 	}
-	map_end--;
-	i = map_start;
-	while (i <= map_end)
+	data->map_end--;
+	i = data->map_start;
+	while (i <= data->map_end)
 	{
 		trim = ft_strtrim(data->map[i], " \t\n");
 		if (!trim || ft_strlen(trim) == 0)
@@ -182,7 +182,7 @@ int	check_walls(t_map *data)
             i++;
             continue;
         }
-		if (i == map_start || i == map_end)
+		if (i == data->map_start || i == data->map_end)
 		{
 			j = 0;
 			while (trim[j])
@@ -226,7 +226,7 @@ int	check_rgb(t_textures *textures)
 // 	return (1);
 // }
 
-int	check_map_file(t_map *data, t_textures *textures)
+int	check_map_file(t_data *data, t_textures *textures)
 {
 	if (!check_textures(data, "NO", 2) || !check_textures(data, "SO", 2) || \
 	!check_textures(data, "WE", 2) || !check_textures(data, "EA", 2) || \
