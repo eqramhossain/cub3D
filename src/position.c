@@ -6,13 +6,13 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 15:13:16 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/14 16:17:10 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/15 18:59:29 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int	get_location(t_data *data)
+int	get_location(t_data *data, t_player *player)
 {
 	int	i;
 	int	j;
@@ -26,8 +26,8 @@ int	get_location(t_data *data)
 			if (data->map[i][j] == 'N' || data->map[i][j] == 'S' || \
 				data->map[i][j] == 'W' || data->map[i][j] == 'E')
 			{
-				data->player_row = i;
-				data->player_col = j;
+				player->x = i;
+				player->y = j;
 				return (1);
 			}
 			j++;

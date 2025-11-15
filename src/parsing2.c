@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 15:57:57 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/14 16:22:35 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/15 17:50:40 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,7 +166,7 @@ int	check_walls(t_data *data)
 	data->map_end = data->map_start;
 	while (data->map[data->map_end])
 	{
-		if (!is_map_line(data->map[data->map_end]))
+		if (!is_map_line2(data->map[data->map_end], data))
 			return (0);
 		data->map_end++;
 	}
@@ -215,16 +215,6 @@ int	check_rgb(t_textures *textures)
 		return (0);
 	return (1);
 }
-
-// int	check_access(t_textures *textures)
-// {
-// 	if (mlx_xpm_file_to_image(textures->mlx->mlx_ptr, textures->SO, 0, 0) == NULL || \
-// 		mlx_xpm_file_to_image(textures->mlx->mlx_ptr, textures->EA, 0, 0) == NULL || \
-// 		mlx_xpm_file_to_image(textures->mlx->mlx_ptr, textures->NO, 0, 0) == NULL || \
-// 		mlx_xpm_file_to_image(textures->mlx->mlx_ptr, textures->WE, 0, 0) == NULL)
-// 		return (0);
-// 	return (1);
-// }
 
 int	check_map_file(t_data *data, t_textures *textures)
 {

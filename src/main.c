@@ -6,13 +6,13 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 13:44:15 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/14 16:28:58 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/15 18:49:44 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-void	parsing(t_data *data, t_textures *textures)
+void	parsing(t_data *data, t_textures *textures, t_player *player)
 {
 	if (!check_map_file(data, textures))
 	{
@@ -20,13 +20,13 @@ void	parsing(t_data *data, t_textures *textures)
 		free_textures(textures);
 		exit(1);
 	}
-	if (!get_location(data))
+	if (!get_location(data, player))
 	{
 		free_tab(data->map);
 		free_textures(textures);
 		exit(1);
 	}
-	printf("%c\n", data->map[data->player_row][data->player_col]);
+	printf("get_location : player->x = %lf\nget_location : player->y = %lf\n", player->x, player->y);
 }
 
 int	on_destroy(t_data *data)
@@ -64,9 +64,11 @@ int	main(int ac, char **av)
 {
 	t_data	data;
 	t_textures	textures;
+	t_player	player;
 	char	*tmp;
 
 	ft_memset(&data, 0, sizeof(t_data));
+	ft_memset(&player, 0, sizeof(t_player));
 	init_textures(&textures);
 	data.textures = &textures;
 	if (ac != 2)
@@ -79,7 +81,7 @@ int	main(int ac, char **av)
 	tmp = read_map(av[1]);
 	data.map = ft_split(tmp, '\n');
 	free(tmp);
-	parsing(&data, &textures);
+	parsing(&data, &textures, &player);
 	init_mlx(&data);
 	return (0);
 }

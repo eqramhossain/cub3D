@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:21 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/14 16:29:06 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/15 18:46:15 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,19 @@ typedef struct s_textures
 	int		ceiling_tab[3];
 }	t_textures;
 
+typedef struct s_player
+{
+	double	x;
+	double	y;
+	double	dir_x;
+	double	dir_y;
+	double	plane_x;
+	double	plane_y;
+}	t_player;
+
 typedef	struct s_data
 {
+	int			tmp;
 	int			width;
 	int			height;
 	int			map_end;
@@ -59,8 +70,9 @@ void	init_textures(t_textures *textures);
 void	free_textures(t_textures *textures);
 int		is_map_line(char *line);
 void	copy_textures(t_textures *textures, char **tab, int i);
+int		is_map_line2(char *line, t_data *data);
 
 /* POSITION */
-int		get_location(t_data *data);
+int		get_location(t_data *data, t_player *player);
 
 #endif
