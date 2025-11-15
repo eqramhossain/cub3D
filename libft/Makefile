@@ -6,7 +6,7 @@
 #    By: egerin <egerin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/12 15:31:52 by egerin            #+#    #+#              #
-#    Updated: 2025/11/09 16:53:35 by egerin           ###   ########.fr        #
+#    Updated: 2025/11/15 22:11:00 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,13 +28,26 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
+	@echo -n "$(GREEN)libft complied"
+	@echo -n "$(END)\n"
 
-clean :
-	@rm -rf $(OBJ)
+clean : 
+	@rm -f $(OBJ)
+	@echo -n "$(RED)libft object files removed"
+	@echo -n "$(END)\n"
 
-fclean : clean
-	@rm -rf $(NAME)
+fclean :
+	@rm -f $(OBJ)
+	@rm -f $(NAME)
+	@echo -n "$(RED)libft object files removed\n"
+	@echo -n "$(RED)libft.a removed"
+	@echo -n "$(END)\n"
 
 re : fclean all
 
-.PHONY : clean re all fclean
+.PHONY: clean fclean re all
+
+# Define color variables
+RED    = \033[0;31m
+GREEN  = \033[0;32m
+END     = \033[0m

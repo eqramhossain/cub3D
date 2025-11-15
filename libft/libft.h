@@ -6,12 +6,13 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 10:38:48 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/09 16:53:08 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/15 21:57:27 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 5
 # endif
@@ -48,7 +49,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-char    			*ft_strstr(char *s1, char *s2);
+char				*ft_strstr(char *s1, char *s2);
 char				*ft_strnstr(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *nptr);
 void				*ft_calloc(size_t nmemb, size_t size);
