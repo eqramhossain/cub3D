@@ -6,7 +6,7 @@
 #    By: egerin <egerin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 13:37:08 by egerin            #+#    #+#              #
-#    Updated: 2025/11/14 15:13:36 by egerin           ###   ########.fr        #
+#    Updated: 2025/11/16 20:41:28 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,47 +19,56 @@ _PURPLE=$'\x1b[35m'
 _CYAN=$'\x1b[36m'
 _WHITE=$'\x1b[37m'
 
-NAME = cub3d
-LIBFT = libft.a
-MLX = minilibx-linux/libmlx.a
-MLX_DIR = minilibx-linux/
-LIBFT_DIR = libft/
+NAME = cub3D
+LIBFT = ./libft/libft.a
+LIBFT_DIR = ./libft
+LIB_MLX = ./minilibx-linux/libmlx.a
+DIR_MLX = ./minilibx-linux
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g3 -I${LIBFT} -Iincludes -I${MLX_DIR}
+CFLAGS = -Wall -Wextra -Werror -g3 -I${LIBFT_DIR} -Iincludes -I${DIR_MLX}
 MLX_FLAGS = -Lminilibx-linux -lmlx -lX11 -lXext -lm
 LDFLAGS = -L${LIBFT_DIR} -lft
+MAKE = make --no-print-directory
 
-SRC_FILES = src/main.c src/parsing.c src/parsing2.c src/utils.c src/sprites.c src/position.c
-SRC = $(SRC_FILES)
+SRC = src/main.c\
+	  src/parsing.c\
+	  src/parsing2.c\
+	  src/utils.c\
+	  src/sprites.c\
+	  src/position.c
+
 OBJ = $(SRC:.c=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ) $(LIBFT) ${LIB_MLX}
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB_MLX) $(LIBFT) ${MLX_FLAGS} $(LDFLAGS)
+	@echo "$(_GREEN)cub3D compiled"
 
 %.o:%.c
 	@$(CC) $(CFLAGS) -c -g3 $< -o $@
 
-$(NAME): $(OBJ) $(LIBFT) ${MLX}
-	@$(CC) $(CFLAGS) $(OBJ) $(LDFLAGS) ${MLX_FLAGS} -o $(NAME)
-	@echo "✅ $(_GREEN)Compiled succesfully ! ✅"
+$(LIBFT):
+	@$(MAKE) -C $(LIBFT_DIR)
 
-
-all: $(NAME)
-
-$(LIBFT): ${LIBFT_DIR}
-	@make --no-print-directory -C $(LIBFT_DIR)
-
-${MLX}:
-	@make --no-print-directory -C ${MLX_DIR}
+${LIB_MLX}:
+	@$(MAKE) -C ${DIR_MLX} > /dev/null 2>&1
 
 clean:
-	@make --no-print-directory clean -C ${LIBFT_DIR}
-	@make --no-print-directory clean -C ${MLX_DIR}
+	@$(MAKE) clean -C ${LIBFT_DIR}
+	@$(MAKE) clean -C ${DIR_MLX} > /dev/null 2>&1
 	@rm -f $(OBJ)
-	@echo "🚮 $(_RED)Deleted succesfully ! 🚮"
+	@echo "$(_RED)cub3D object files removed"
 
-fclean: clean
-	@make --no-print-directory fclean -C ${LIBFT_DIR}
+fclean:
+	@$(MAKE) fclean -C ${LIBFT_DIR}
+	@$(MAKE) clean -C ${DIR_MLX} > /dev/null 2>&1
+	@rm -f $(OBJ)
 	@rm -f $(NAME)
+	@echo "$(_RED)cub3D object files removed"
+	@echo "$(_RED)cub3D removed"
 
-re:fclean all
+re: fclean all
 
 .PHONY: all clean fclean re
