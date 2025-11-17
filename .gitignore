@@ -1,6 +1,7 @@
 ## Mlx related
 Makefile.gen
 minilibx-linux/test/mlx-test
+compile_commands.json
 
 ## Editor
 .vscode/*
