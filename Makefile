@@ -6,7 +6,7 @@
 #    By: egerin <egerin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 13:37:08 by egerin            #+#    #+#              #
-#    Updated: 2025/11/16 20:41:28 by ehossain         ###   ########.fr        #
+#    Updated: 2025/11/17 20:45:03 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,12 +31,13 @@ MLX_FLAGS = -Lminilibx-linux -lmlx -lX11 -lXext -lm
 LDFLAGS = -L${LIBFT_DIR} -lft
 MAKE = make --no-print-directory
 
-SRC = src/main.c\
-	  src/parsing.c\
-	  src/parsing2.c\
-	  src/utils.c\
-	  src/sprites.c\
-	  src/position.c
+SRC = ./src/parsing/main.c\
+	  ./src/parsing/parsing.c\
+	  ./src/parsing/parsing2.c\
+	  ./src/parsing/utils.c\
+	  ./src/parsing/sprites.c\
+	  ./src/parsing/position.c \
+	  ./src/parsing/utils2.c
 
 OBJ = $(SRC:.c=.o)
 
