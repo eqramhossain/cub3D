@@ -6,7 +6,7 @@
 #    By: egerin <egerin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 13:37:08 by egerin            #+#    #+#              #
-#    Updated: 2025/11/17 20:45:03 by ehossain         ###   ########.fr        #
+#    Updated: 2025/11/18 18:13:21 by egerin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,9 @@ SRC = ./src/parsing/main.c\
 	  ./src/parsing/utils.c\
 	  ./src/parsing/sprites.c\
 	  ./src/parsing/position.c \
-	  ./src/parsing/utils2.c
+	  ./src/parsing/utils2.c \
+	  ./src/parsing/utils3.c \
+	  ./src/parsing/parsing3.c
 
 OBJ = $(SRC:.c=.o)
 
