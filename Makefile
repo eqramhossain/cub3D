@@ -6,18 +6,9 @@
 #    By: egerin <egerin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 13:37:08 by egerin            #+#    #+#              #
-#    Updated: 2025/11/17 20:45:03 by ehossain         ###   ########.fr        #
+#    Updated: 2025/11/18 14:03:30 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-_GREY=$'\x1b[30m'
-_RED=\e[1;31m
-_GREEN=\e[1;32m
-_YELLOW=$'\x1b[33m'
-_BLUE=$'\x1b[34m'
-_PURPLE=$'\x1b[35m'
-_CYAN=$'\x1b[36m'
-_WHITE=$'\x1b[37m'
 
 NAME = cub3D
 LIBFT = ./libft/libft.a
@@ -73,3 +64,12 @@ fclean:
 re: fclean all
 
 .PHONY: all clean fclean re
+
+_GREY=$'\x1b[30m'
+_RED=\e[1;31m
+_GREEN=\e[1;32m
+_YELLOW=$'\x1b[33m'
+_BLUE=$'\x1b[34m'
+_PURPLE=$'\x1b[35m'
+_CYAN=$'\x1b[36m'
+_WHITE=$'\x1b[37m'
