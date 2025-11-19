@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:21 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/19 13:14:34 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/19 17:27:17 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ typedef struct s_player
 	double		dir_y;
 	double		plane_x;
 	double		plane_y;
+	int			angle;
 }				t_player;
 
 typedef struct s_data
@@ -88,5 +89,6 @@ int				find_map_end(t_data *data);
 
 /* POSITION */
 int				get_location(t_data *data, t_player *player);
+int				get_angle(t_data *data, t_player *player);
 
 #endif

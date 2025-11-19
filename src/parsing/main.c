@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 13:44:15 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/17 20:15:06 by ehossain         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:29:32 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ void	parsing(t_data *data, t_textures *textures, t_player *player)
 		free_textures(textures);
 		exit(1);
 	}
-	if (!get_location(data, player))
+	if (!get_location(data, player) || !get_angle(data, player))
 	{
 		free_tab(data->map);
 		free_textures(textures);
 		exit(1);
 	}
-	printf("get_location : player->x = %lf\nget_location : player->y = %lf\n",
-		player->x, player->y);
+	printf("get_location : player->x = %lf\nget_location : player->y = %lf\nget_angle : %d\n",
+		player->x, player->y, player->angle);
 }
 
 int	on_destroy(t_data *data)
