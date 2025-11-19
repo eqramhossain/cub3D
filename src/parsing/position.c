@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 15:13:16 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/17 20:15:13 by ehossain         ###   ########.fr       */
+/*   Updated: 2025/11/19 17:28:42 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,31 @@ int	get_location(t_data *data, t_player *player)
 			j++;
 		}
 		i++;
+	}
+	return (0);
+}
+
+int	get_angle(t_data *data, t_player *player)
+{
+	if (data->map[(int)player->x][(int)player->y] == 'N')
+	{
+		player->angle = 0;
+		return (1);
+	}
+	else if (data->map[(int)player->x][(int)player->y] == 'E')
+	{
+		player->angle = 90;
+		return (1);
+	}
+	else if (data->map[(int)player->x][(int)player->y] == 'S')
+	{
+		player->angle = 180;
+		return (1);
+	}
+	else if (data->map[(int)player->x][(int)player->y] == 'W')
+	{
+		player->angle = 270;
+		return (1);
 	}
 	return (0);
 }
