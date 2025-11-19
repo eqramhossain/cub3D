@@ -6,11 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:21 by egerin            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/11/18 14:04:39 by ehossain         ###   ########.fr       */
-=======
-/*   Updated: 2025/11/18 18:17:55 by egerin           ###   ########.fr       */
->>>>>>> refs/remotes/origin/main
+/*   Updated: 2025/11/19 13:14:34 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +23,14 @@
 
 typedef struct s_textures
 {
-	char		*NO;
-	char		*SO;
-	char		*WE;
-	char		*EA;
-	void		*NO_sprite;
-	void		*SO_sprite;
-	void		*WE_sprite;
-	void		*EA_sprite;
+	char		*no;
+	char		*so;
+	char		*we;
+	char		*ea;
+	void		*no_sprite;
+	void		*so_sprite;
+	void		*we_sprite;
+	void		*ea_sprite;
 	int			floor_tab[3];
 	int			ceiling_tab[3];
 }				t_textures;
@@ -65,9 +61,13 @@ typedef struct s_data
 }				t_data;
 
 /* PARSING */
-<<<<<<< HEAD
 int				check_file_extension(char *str, char *extension);
 int				check_map_file(t_data *data, t_textures *textures);
+int				check_textures(t_data *data, char *flag, int j);
+int				store_textures(t_data *data, t_textures *textures);
+int				store_rgb(t_data *data, t_textures *textures);
+int				check_walls(t_data *data);
+int				check_rgb(t_textures *textures);
 char			*read_map(char *file);
 
 /* UTILS */
@@ -77,32 +77,14 @@ void			free_textures(t_textures *textures);
 int				is_map_line(char *line);
 void			copy_textures(t_textures *textures, char **tab, int i);
 int				is_map_line2(char *line, t_data *data);
-=======
-int		check_file_extension(char *str, char *extension);
-int		check_map_file(t_data *data, t_textures *textures);
-char	*read_map(char *file);
-int		check_rgb(t_textures *textures);
-int		check_walls(t_data *data);
-int		store_rgb(t_data *data, t_textures *textures);
-int		store_textures(t_data *data, t_textures *textures);
-int		check_textures(t_data *data, char *flag, int j);
-
-/* UTILS */
-void	free_tab(char **tab);
-void	init_textures(t_textures *textures);
-void	free_textures(t_textures *textures);
-int		is_map_line(char *line);
-void	copy_textures(t_textures *textures, char **tab, int i);
-int		is_map_line2(char *line, t_data *data);
-int		find_map_start_strcmp(char *trim);
-int		find_map_start(t_data *data);
-int		check_walls_helper(t_data *data, char *trim, int *j, int i);
-int		find_map_end(t_data *data);
-int		line_matches_flag(char *trim, char *flag, int j);
-int		count_unique_flag(t_data *data, char *flag, int j);
-void	store_textures_loop(char *trim, t_textures *textures, int *j);
-void	store_rgb_condition(t_textures *textures, char *trim, int *j);
->>>>>>> refs/remotes/origin/main
+int				line_matches_flag(char *trim, char *flag, int j);
+int				count_unique_flag(t_data *data, char *flag, int j);
+void			store_textures_loop(char *trim, t_textures *textures, int *j);
+void			store_rgb_condition(t_textures *textures, char *trim, int *j);
+int				find_map_start_strcmp(char *trim);
+int				find_map_start(t_data *data);
+int				check_walls_helper(t_data *data, char *trim, int *j, int i);
+int				find_map_end(t_data *data);
 
 /* POSITION */
 int				get_location(t_data *data, t_player *player);

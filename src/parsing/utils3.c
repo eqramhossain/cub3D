@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 18:09:21 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/18 18:10:36 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/19 13:05:50 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	find_map_start_strcmp(char *trim)
 {
-	if (ft_strncmp(trim, "NO ", 3) == 0 || ft_strncmp(trim, "SO ", 3) == 0 || 
-		ft_strncmp(trim, "WE ", 3) == 0 || ft_strncmp(trim, "EA ", 3) == 0 ||
+	if (ft_strncmp(trim, "NO ", 3) == 0 || ft_strncmp(trim, "SO ", 3) == 0 || \
+		ft_strncmp(trim, "WE ", 3) == 0 || ft_strncmp(trim, "EA ", 3) == 0 || \
 		ft_strncmp(trim, "F ", 2) == 0 || ft_strncmp(trim, "C ", 2) == 0)
 		return (1);
 	return (0);
@@ -64,8 +64,8 @@ int	check_walls_helper(t_data *data, char *trim, int *j, int i)
 	}
 	else
 	{
-		if ((trim[0] != '1' && trim[0] != ' ') || (trim[ft_strlen(trim)
-				- 1] != '1' && trim[ft_strlen(trim) - 1] != ' '))
+		if ((trim[0] != '1' && trim[0] != ' ') || \
+		(trim[ft_strlen(trim) - 1] != '1' && trim[ft_strlen(trim) - 1] != ' '))
 			return (0);
 	}
 	return (1);

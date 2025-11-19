@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 14:50:46 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/17 20:37:36 by ehossain         ###   ########.fr       */
+/*   Updated: 2025/11/19 13:16:14 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	init_textures(t_textures *textures)
 {
-	textures->EA = NULL;
-	textures->NO = NULL;
-	textures->SO = NULL;
-	textures->WE = NULL;
+	textures->ea = NULL;
+	textures->no = NULL;
+	textures->so = NULL;
+	textures->we = NULL;
 }
 
 void	free_textures(t_textures *textures)
 {
-	free(textures->EA);
-	free(textures->NO);
-	free(textures->SO);
-	free(textures->WE);
+	free(textures->ea);
+	free(textures->no);
+	free(textures->so);
+	free(textures->we);
 }
 
 void	free_tab(char **tab)

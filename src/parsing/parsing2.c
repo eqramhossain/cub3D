@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 15:57:57 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/18 18:14:35 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/19 13:01:55 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	check_textures(t_data *data, char *flag, int j)
 {
-    if (!data || !data->map)
-        return (0);
-    return (count_unique_flag(data, flag, j));
+	if (!data || !data->map)
+		return (0);
+	return (count_unique_flag(data, flag, j));
 }
 
 int	store_textures(t_data *data, t_textures *textures)
