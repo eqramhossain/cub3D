@@ -6,12 +6,25 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:21 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/19 17:27:17 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/21 16:16:34 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
+
+# ifndef width_win
+#  define widht_win 1080
+# endif
+
+# ifndef height_win
+#  define height_win 720
+# endif
+
+# define NO_SPRITE "./textures/xpm/NO.xpm"
+# define SO_SPRITE "./textures/xpm/SO.xpm"
+# define WE_SPRITE "./textures/xpm/WE.xpm"
+# define EA_SPRITE "./textures/xpm/EA.xpm"
 
 # include "../libft/libft.h"
 # include "../minilibx-linux/mlx.h"
@@ -27,10 +40,12 @@ typedef struct s_textures
 	char		*so;
 	char		*we;
 	char		*ea;
-	void		*no_sprite;
-	void		*so_sprite;
-	void		*we_sprite;
-	void		*ea_sprite;
+	char		*no_sprite;
+	char		*so_sprite;
+	char		*we_sprite;
+	char		*ea_sprite;
+	int			floor;
+	int			ceiling;
 	int			floor_tab[3];
 	int			ceiling_tab[3];
 }				t_textures;
@@ -86,9 +101,20 @@ int				find_map_start_strcmp(char *trim);
 int				find_map_start(t_data *data);
 int				check_walls_helper(t_data *data, char *trim, int *j, int i);
 int				find_map_end(t_data *data);
+void			ft_error(char *error_msg);
+int				ft_create_color(int r, int g, int b);
 
 /* POSITION */
 int				get_location(t_data *data, t_player *player);
 int				get_angle(t_data *data, t_player *player);
+
+/* ========================================================================== */
+/*                             RAYCASTING                                     */
+/* ========================================================================== */
+
+void			ft_get_parsed_data(t_data *data, t_player *player,
+					t_textures *textures);
+void			ft_handle_mlx(t_data *data);
+void			ft_init_mlx(t_data *data);
 
 #endif
