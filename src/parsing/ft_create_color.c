@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 16:15:12 by ehossain          #+#    #+#             */
-/*   Updated: 2025/11/21 16:16:09 by ehossain         ###   ########.fr       */
+/*   Updated: 2025/11/21 18:34:09 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_create_color(int r, int g, int b)
 {
-	return ((b << 16) | (g << 8) | r);
+	return ((r << 16) | (g << 8) | b);
 }
