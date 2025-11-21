@@ -6,7 +6,7 @@
 #    By: egerin <egerin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 13:37:08 by egerin            #+#    #+#              #
-#    Updated: 2025/11/21 16:21:08 by ehossain         ###   ########.fr        #
+#    Updated: 2025/11/21 18:09:12 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ DIR_MLX = ./minilibx-linux
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g3 -I${LIBFT_DIR} -Iincludes -I${DIR_MLX}
-MLX_FLAGS = -Lminilibx-linux -lmlx -lX11 -lXext -lm
+MLX_FLAGS = -Lminilibx-linux -lmlx -lX11 -lXext -lm -g3
 LDFLAGS = -L${LIBFT_DIR} -lft
 MAKE = make --no-print-directory
 
@@ -26,7 +26,6 @@ SRC_PARSING = ./src/parsing/main.c\
 			  ./src/parsing/parsing.c\
 			  ./src/parsing/parsing2.c\
 			  ./src/parsing/utils.c\
-			  ./src/parsing/sprites.c\
 			  ./src/parsing/position.c \
 			  ./src/parsing/utils2.c \
 			  ./src/parsing/utils3.c \
@@ -36,6 +35,7 @@ SRC_PARSING = ./src/parsing/main.c\
 
 SRC_RAYCASTING = ./src/raycasting/ft_handle_mlx.c \
 				 ./src/raycasting/ft_get_parsed_data.c \
+				 ./src/raycasting/sprites.c\
 
 SRC_ALL = $(SRC_PARSING) \
 		  $(SRC_RAYCASTING)
