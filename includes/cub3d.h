@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 13:12:21 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/21 16:16:34 by ehossain         ###   ########.fr       */
+/*   Updated: 2025/11/21 21:41:08 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,11 @@ void			ft_get_parsed_data(t_data *data, t_player *player,
 					t_textures *textures);
 void			ft_handle_mlx(t_data *data);
 void			ft_init_mlx(t_data *data);
+void			ft_generate_sprites(t_data *data, t_textures *textures);
+void			ft_check_sprite(void *sprite, t_data *data);
+
+void			ft_print_t_data(t_data *data);
+void			ft_print_t_player(t_player *player);
+void			ft_print_t_textures(t_textures *textures);
 
 #endif

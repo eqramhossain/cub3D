@@ -6,7 +6,7 @@
 #    By: egerin <egerin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 13:37:08 by egerin            #+#    #+#              #
-#    Updated: 2025/11/21 18:09:12 by ehossain         ###   ########.fr        #
+#    Updated: 2025/11/21 21:42:11 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRC_PARSING = ./src/parsing/main.c\
 SRC_RAYCASTING = ./src/raycasting/ft_handle_mlx.c \
 				 ./src/raycasting/ft_get_parsed_data.c \
 				 ./src/raycasting/sprites.c\
+				 ./src/raycasting/ft_print_all_struct.c \
 
 SRC_ALL = $(SRC_PARSING) \
 		  $(SRC_RAYCASTING)
