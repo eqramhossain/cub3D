@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 15:57:57 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/19 13:01:55 by egerin           ###   ########.fr       */
+/*   Updated: 2025/11/21 16:18:06 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,9 +97,13 @@ int	check_rgb(t_textures *textures)
 		|| (textures->floor_tab[1] < 0 || textures->floor_tab[1] > 255)
 		|| (textures->floor_tab[2] < 0 || textures->floor_tab[2] > 255))
 		return (0);
+	textures->floor = ft_create_color(textures->floor_tab[0],
+			textures->floor_tab[1], textures->floor_tab[2]);
 	if ((textures->ceiling_tab[0] < 0 || textures->ceiling_tab[0] > 255)
 		|| (textures->ceiling_tab[1] < 0 || textures->ceiling_tab[1] > 255)
 		|| (textures->ceiling_tab[2] < 0 || textures->ceiling_tab[2] > 255))
 		return (0);
+	textures->ceiling = ft_create_color(textures->ceiling_tab[0],
+			textures->ceiling_tab[1], textures->ceiling_tab[2]);
 	return (1);
 }
