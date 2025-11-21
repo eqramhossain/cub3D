@@ -3,6 +3,7 @@ Makefile.gen
 minilibx-linux/test/mlx-test
 compile_commands.json
 .cache/
+./textures/Tiny_Swords/
 
 ## Editor
 .vscode/*
