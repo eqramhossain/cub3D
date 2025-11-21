@@ -6,7 +6,7 @@
 #    By: egerin <egerin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/10 13:37:08 by egerin            #+#    #+#              #
-#    Updated: 2025/11/19 13:08:03 by egerin           ###   ########.fr        #
+#    Updated: 2025/11/21 14:28:57 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,17 +22,24 @@ MLX_FLAGS = -Lminilibx-linux -lmlx -lX11 -lXext -lm
 LDFLAGS = -L${LIBFT_DIR} -lft
 MAKE = make --no-print-directory
 
-SRC = ./src/parsing/main.c\
-	  ./src/parsing/parsing.c\
-	  ./src/parsing/parsing2.c\
-	  ./src/parsing/utils.c\
-	  ./src/parsing/sprites.c\
-	  ./src/parsing/position.c \
-	  ./src/parsing/utils2.c \
-	  ./src/parsing/utils3.c \
-	  ./src/parsing/parsing3.c
+SRC_PARSING = ./src/parsing/main.c\
+			  ./src/parsing/parsing.c\
+			  ./src/parsing/parsing2.c\
+			  ./src/parsing/utils.c\
+			  ./src/parsing/sprites.c\
+			  ./src/parsing/position.c \
+			  ./src/parsing/utils2.c \
+			  ./src/parsing/utils3.c \
+			  ./src/parsing/parsing3.c \
+			  ./src/parsing/ft_error.c \
 
-OBJ = $(SRC:.c=.o)
+SRC_RAYCASTING = ./src/raycasting/ft_handle_mlx.c \
+				 ./src/raycasting/ft_get_parsed_data.c \
+
+SRC_ALL = $(SRC_PARSING) \
+		  $(SRC_RAYCASTING)
+
+OBJ = $(SRC_ALL:.c=.o)
 
 all: $(NAME)
 
