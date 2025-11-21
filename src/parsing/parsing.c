@@ -6,7 +6,7 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 16:16:41 by egerin            #+#    #+#             */
-/*   Updated: 2025/11/17 20:15:09 by ehossain         ###   ########.fr       */
+/*   Updated: 2025/11/21 14:30:59 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	check_new_line(char *map)
 		if (map[i] == '\n' && map[i + 1] == '\n')
 		{
 			ft_printf("Error\nNewline in the map\n");
+			// please use the function ft_error to output any error msg without '\n'
 			return (0);
 		}
 		i++;
@@ -64,6 +65,7 @@ void	check_file(char *str, int fd)
 	{
 		close(fd);
 		ft_printf("Error file content\n");
+		// please use the function ft_error to output any error msg without '\n'
 		exit(0);
 	}
 }
@@ -79,6 +81,7 @@ char	*read_map(char *file)
 	if (fd < 0)
 	{
 		write(1, "problem with map file\n", 22);
+		// please use the function ft_error to output any error msg without '\n'
 		exit(1);
 	}
 	line = get_next_line(fd);
