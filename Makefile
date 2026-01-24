@@ -6,7 +6,7 @@
 #    By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 10:51:38 by ehossain          #+#    #+#              #
-#    Updated: 2026/01/24 13:02:21 by ehossain         ###   ########.fr        #
+#    Updated: 2026/01/24 19:27:50 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,25 +17,26 @@ LIB_MLX = ./minilibx-linux/libmlx.a
 DIR_MLX = ./minilibx-linux
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g3 
-INCLUDE_FLAGS = -I${LIBFT_DIR} -Iincludes -I${DIR_MLX}
+CFLAGS = -Wall -Wextra -Werror -g3 -I${LIBFT_DIR} -Iinclude -I${DIR_MLX}
 MLX_FLAGS = -Lminilibx-linux -lmlx -lX11 -lXext -lm -g3
 LDFLAGS = -L${LIBFT_DIR} -lft
 MAKE = make --no-print-directory
 
 SRC_PARSING = ./src/main.c
-OBJ_PARSING = $(SRC_PARSING:.c=.o)
 
 SRC_RAYCAST = 
-OBJ_RAYCAST = $(SRC_RAYCAST:.c=.o)
 
-all = $(NAME)
+SRC_ALL = $(SRC_PARSING) $(SRC_RAYCAST)
+
+OBJ = $(SRC_ALL:.c=.o)
+
+all : $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT) ${LIB_MLX}
-	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ_PARSING) $(OBJ_RAYCAST) $(LIB_MLX) $(LIBFT) ${MLX_FLAGS} $(LDFLAGS)
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB_MLX) $(LIBFT) ${MLX_FLAGS} $(LDFLAGS)
 	@echo "$(GREEN)cub3D compiled$(END)"
 
-%.o:%.c
+%.o: %.c
 	@$(CC) $(CFLAGS) -c -g3 $< -o $@
 
 $(LIBFT):
@@ -45,17 +46,25 @@ ${LIB_MLX}:
 	@$(MAKE) -C ${DIR_MLX} > /dev/null 2>&1
 
 clean :
-	rm -f $(OBJ_PARSING) $(OBJ_RAYCAST)
+	@$(MAKE) clean -C ${LIBFT_DIR}
+	@$(MAKE) clean -C ${DIR_MLX} > /dev/null 2>&1
+	@rm -f $(OBJ)
+	@echo "$(RED)cub3D object files removed$(END)"
 
 fclean :
-	rm -f $(OBJ_PARSING) $(OBJ_RAYCAST)
-	rm -f $(NAME)
+	@$(MAKE) fclean -C ${LIBFT_DIR}
+	@$(MAKE) clean -C ${DIR_MLX} > /dev/null 2>&1
+	@rm -f $(OBJ)
+	@rm -f $(NAME)
+	@echo "$(RED)cub3D object files removed$(END)"
+	@echo "$(RED)cub3D removed$(END)"
 
 re : fclean all
 
-norm: norminette ./src
+norm:
+	norminette include libft src
 
-.PHONY : clean fclean re all
+.PHONY : clean fclean re all norm
 
 RED    = \033[0;31m
 GREEN  = \033[0;32m
