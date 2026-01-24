@@ -6,7 +6,7 @@
 #    By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/23 14:36:30 by ehossain          #+#    #+#              #
-#    Updated: 2026/01/19 19:41:45 by ehossain         ###   ########.fr        #
+#    Updated: 2026/01/22 11:37:18 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,7 @@ fclean : clean
 
 re : fclean all
 
-.PHONY: clean fclean re all loading
+.PHONY: clean fclean re all
 
 
 
