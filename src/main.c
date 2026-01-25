@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 19:51:31 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/24 12:51:29 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/25 17:39:28 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	main(int ac, char **av)
 {
+	t_data	data;
+
 	if (ac != 2)
 		return (1);
-	ft_putstr_fd(av[1], 1);
+	ft_init_t_file(&data, av[1]);
 	return (0);
 }
