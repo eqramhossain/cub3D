@@ -6,7 +6,7 @@
 #    By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 10:51:38 by ehossain          #+#    #+#              #
-#    Updated: 2026/01/24 19:27:50 by ehossain         ###   ########.fr        #
+#    Updated: 2026/01/28 22:13:14 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,9 +22,19 @@ MLX_FLAGS = -Lminilibx-linux -lmlx -lX11 -lXext -lm -g3
 LDFLAGS = -L${LIBFT_DIR} -lft
 MAKE = make --no-print-directory
 
-SRC_PARSING = ./src/main.c
+SRC_PARSING = ./src/main.c \
+			  ./src/parsing/ft_error.c \
+			  ./src/parsing/ft_check_file_extention.c \
+			  ./src/parsing/ft_read.c \
+			  ./src/parsing/ft_free_t_data.c \
+			  ./src/parsing/ft_parsing.c \
+			  ./src/parsing/ft_check_texture_flag.c \
+			  ./src/parsing/ft_check_texture_file.c \
+			  ./src/parsing/ft_store_texture_file.c \
+			  ./src/parsing/ft_floor_ceiling.c \
 
-SRC_RAYCAST = 
+
+SRC_RAYCAST = ./src/raycast/ft_init_mlx.c \
 
 SRC_ALL = $(SRC_PARSING) $(SRC_RAYCAST)
 
