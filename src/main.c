@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 19:51:31 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/28 11:15:59 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/29 19:05:06 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,14 @@ static int	ft_init_t_file(t_data *data)
 		return (ft_error("provided file is empty"), ERROR);
 	ft_print_file_content(data->file_content); // this will be removed
 	return (SUCCESS);
+}
+
+void	ft_init_struct(t_data *data)
+{
+	data->texture = ft_calloc(1, sizeof(t_texture));
+	data->img = ft_calloc(1, sizeof(t_img));
+	data->player = ft_calloc(1, sizeof(t_player));
+	data->ray = ft_calloc(1, sizeof(t_ray));
 }
 
 int	main(int ac, char **av)
