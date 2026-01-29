@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/28 22:15:10 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/29 10:36:10 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,7 @@ char				*ft_read(t_data *data);
 void				ft_free_t_data(t_data *data);
 int					ft_parsing(t_data *data);
 int					ft_check_file(t_data *data);
+
 int					ft_check_all_texture_flag(t_data *data);
 int					ft_check_all_texture_file(t_data *data);
 char				*ft_find_texture_line(char **file_content,
@@ -143,6 +144,7 @@ char				*ft_find_texture_line(char **file_content,
 
 char				*ft_extract_texture_path(char *line, char *identifier);
 int					ft_store_all_texture_file(t_data *data);
+
 int					ft_check_floor_ceiling_flag(t_data *data);
 int					ft_store_floor_ceiling_color(t_data *data);
 int					ft_is_rgb_valid(t_data *data);

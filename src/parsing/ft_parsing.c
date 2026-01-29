@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:37:05 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/28 22:10:01 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/29 10:47:54 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int	ft_check_file(t_data *data)
 		return (ERROR);
 	if (ft_store_all_texture_file(data) == ERROR)
 		return (ERROR);
-	// if (ft_check_floor_ceiling_flag(data) == ERROR)
-	// 	return (ERROR);
-	// if (ft_store_floor_ceiling_color(data) == ERROR)
-	// 	return (ERROR);
+	if (ft_check_floor_ceiling_flag(data) == ERROR)
+		return (ERROR);
+	if (ft_store_floor_ceiling_color(data) == ERROR)
+		return (ERROR);
 	// if (ft_is_rgb_valid(data) == ERROR)
 	// 	return (ERROR);
 	return (SUCCESS);
