@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/29 14:22:43 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/29 18:37:57 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,7 @@ typedef struct s_data
 {
 	char			**file_content;
 	char			*file_name;
+	char			**map;
 	void			*mlx_ptr;
 	void			*win_ptr;
 	t_texture		*texture;
@@ -143,6 +144,8 @@ int					ft_store_all_texture_file(t_data *data);
 int					ft_check_floor_ceiling_flag(t_data *data);
 int					ft_store_floor_ceiling_color(t_data *data);
 int					ft_is_rgb_valid(t_texture *texture);
+
+int					ft_check_map(t_data *data);
 
 /* ========================================================================== */
 /*                             RAYCASTING                                     */

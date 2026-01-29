@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:37:05 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/29 13:46:48 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/29 18:50:48 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,15 @@ static void	ft_init_t_texture(t_data *data)
 	data->texture = calloc(1, sizeof(t_texture));
 }
 
+// int	ft_check_map(t_data *data)
+// {
+// 	if (ft_is_map_last(data) == ERROR)
+// 		return (ft_error("map is not the last element"), ERROR);
+// 	if (ft_extract_map(data) == ERROR)
+// 		return (ERROR);
+// 	return (SUCCESS);
+// }
+
 int	ft_parsing(t_data *data)
 {
 	if (ft_init_mlx(data) == ERROR)
@@ -41,5 +50,7 @@ int	ft_parsing(t_data *data)
 	ft_init_t_texture(data);
 	if (ft_check_file(data) == ERROR)
 		return (ERROR);
+	// if (ft_check_map(data) == ERROR)
+	// return (ERROR);
 	return (SUCCESS);
 }
