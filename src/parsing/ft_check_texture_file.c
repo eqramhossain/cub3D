@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 14:54:49 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/28 22:14:59 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/29 12:25:36 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_extract_texture_path(char *line, char *identifier)
 	{
 		ft_putstr_fd("ERROR:\n failed to extract ", 2);
 		ft_putstr_fd(identifier, 2);
-		ft_putstr_fd("texture path\n", 2);
+		ft_putstr_fd(" path\n", 2);
 		return (NULL);
 	}
 	return (path);
@@ -58,16 +58,19 @@ char	*ft_find_texture_line(char **file_content, char *identifier)
 {
 	int	i;
 	int	j;
+	int	len;
 
+	len = ft_strlen(identifier);
 	i = 0;
 	while (file_content[i])
 	{
 		j = 0;
 		while (file_content[i][j] == ' ' || file_content[i][j] == '\t')
 			j++;
-		if (ft_strncmp(&file_content[i][j], identifier, 2) == 0)
+		if (ft_strncmp(&file_content[i][j], identifier, len) == 0)
 		{
-			if (file_content[i][j + 2] == ' ' || file_content[i][j + 2] == '\t')
+			if (file_content[i][j + len] == ' ' || file_content[i][j
+				+ len] == '\t')
 			{
 				return (file_content[i]);
 			}
@@ -77,6 +80,7 @@ char	*ft_find_texture_line(char **file_content, char *identifier)
 	return (NULL);
 }
 
+// there might me some error edge cases regarding to if line is NULL or path is NULL
 int	ft_check_all_texture_file(t_data *data)
 {
 	char	*path;

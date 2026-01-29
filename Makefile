@@ -6,7 +6,7 @@
 #    By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 10:51:38 by ehossain          #+#    #+#              #
-#    Updated: 2026/01/29 10:48:59 by ehossain         ###   ########.fr        #
+#    Updated: 2026/01/29 13:39:09 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC_PARSING = ./src/main.c \
 			  ./src/parsing/ft_store_texture_file.c \
 			  ./src/parsing/ft_check_fc_flag.c \
 			  ./src/parsing/ft_store_fc_color.c \
+			  ./src/parsing/ft_is_rgb_valid.c \
 
 
 SRC_RAYCAST = ./src/raycast/ft_init_mlx.c \

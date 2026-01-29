@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/29 10:36:10 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/29 14:22:43 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,6 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-// void		*no_wall;
-// void		*so_wall;
-// void		*we_wall;
-// void		*ea_wall;
 
 typedef struct s_ray
 {
@@ -102,8 +97,8 @@ typedef struct s_texture
 	char			*so_texture;
 	char			*ea_texture;
 	char			*we_texture;
-	char			*floor;
-	char			*ceiling;
+	int				floor;
+	int				ceiling;
 	int				floor_tab[3];
 	int				ceiling_tab[3];
 	t_tex_helper	tex_helper;
@@ -147,7 +142,7 @@ int					ft_store_all_texture_file(t_data *data);
 
 int					ft_check_floor_ceiling_flag(t_data *data);
 int					ft_store_floor_ceiling_color(t_data *data);
-int					ft_is_rgb_valid(t_data *data);
+int					ft_is_rgb_valid(t_texture *texture);
 
 /* ========================================================================== */
 /*                             RAYCASTING                                     */
