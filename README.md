@@ -16,8 +16,9 @@ valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins
 - [ ]  
 
 ##### Keyboard and mouse:
-- [ ] left right arrow
-- [ ] W A S D keys hook
-- [ ] click on the x of window close the window
-- [ ] and the esc key
+- [x] left right arrow
+- [x] W A S D keys hook
+- [x] click on the x of window close the window
+- [x] and the esc key
+- [x] no segfault or any memorey leak while exiting the program
 
