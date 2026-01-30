@@ -6,19 +6,18 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 11:07:35 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/29 19:37:49 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/30 20:48:26 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-int	ft_destroy_all(int keycode, void *data)
+int	ft_destroy_all(void *param)
 {
-	t_data	*tmp;
+	t_data	*data;
 
-	(void)keycode;
-	tmp = (t_data *)data;
-	ft_free_t_data(tmp);
+	data = (t_data *)param;
+	ft_free_t_data(data);
 	exit(0);
 	return (0);
 }
@@ -27,7 +26,7 @@ int	ft_press_handler(int keycode, void *data)
 {
 	(void)data;
 	if (keycode == ESC)
-		ft_destroy_all(keycode, data);
+		ft_destroy_all(data);
 	if (keycode == W)
 		printf("W pressed\n");
 	if (keycode == A)
@@ -47,7 +46,7 @@ int	ft_release_handler(int keycode, void *data)
 {
 	(void)data;
 	if (keycode == ESC)
-		ft_destroy_all(keycode, data);
+		ft_destroy_all(data);
 	if (keycode == W)
 		printf("W released\n");
 	if (keycode == A)

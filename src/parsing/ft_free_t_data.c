@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:02:48 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/29 19:54:22 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/30 20:52:46 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,17 @@ void	ft_free_texture_path(t_data *data)
 
 void	ft_free_t_data(t_data *data)
 {
+	mlx_loop_end(data->mlx_ptr);
 	ft_free_file_content(data->file_content);
 	ft_free_texture_path(data);
 	ft_free_texture(data);
+	//
 	free(data->texture);
+	//
 	free(data->img);
+	//
 	free(data->player);
+	//
 	free(data->ray);
 	mlx_destroy_window(data->mlx_ptr, data->win_ptr);
 	mlx_destroy_display(data->mlx_ptr);

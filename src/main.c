@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 19:51:31 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/29 19:05:06 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/30 18:53:51 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int	main(int ac, char **av)
 	if (ac != 2)
 		return (ft_error("usage ./cub3d [map name]"), 1);
 	data.file_name = av[1];
+	ft_init_struct(&data);
 	if (ft_init_t_file(&data) == ERROR)
 		return (ERROR);
 	if (ft_parsing(&data) == ERROR)
