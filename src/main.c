@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 19:51:31 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/31 21:46:45 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/31 22:14:07 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	main(int ac, char **av)
 	if (ft_parsing(&data) == ERROR)
 		return (ft_free_t_data(&data), ERROR);
 	ft_print_file_content(data.file_content); // this will be removed
-	// mlx_loop(data.mlx_ptr);
+	mlx_loop(data.mlx_ptr);
 	ft_free_t_data(&data);
 	return (SUCCESS);
 }

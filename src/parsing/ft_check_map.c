@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:12:01 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/31 21:55:10 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/31 22:14:43 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,23 @@ int	ft_is_map_last(t_data *data)
 	return (SUCCESS);
 }
 
-// int	ft_extract_map(t_data *data)
-// {
-// }
+int	ft_extract_map(t_data *data)
+{
+	int	i;
+	int	len;
+	int	j;
+
+	len = 0;
+	while (data->file_content[len])
+		len++;
+	len = len - 6;
+	j = 0;
+	i = 6;
+	while (data->file_content[i])
+	{
+		data->map[j] = ft_strdup(data->file_content[i]);
+		i++;
+		j++;
+	}
+	return (SUCCESS);
+}
