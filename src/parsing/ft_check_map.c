@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:12:01 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/31 22:14:43 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/31 22:20:36 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,9 @@ int	ft_extract_map(t_data *data)
 	while (data->file_content[len])
 		len++;
 	len = len - 6;
+	data->map = ft_calloc(len + 1, sizeof(char *));
+	if (!data->map)
+		return (ERROR);
 	j = 0;
 	i = 6;
 	while (data->file_content[i])
@@ -82,5 +85,6 @@ int	ft_extract_map(t_data *data)
 		i++;
 		j++;
 	}
+	data->map[j] = NULL;
 	return (SUCCESS);
 }
