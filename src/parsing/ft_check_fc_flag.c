@@ -6,13 +6,13 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 10:35:02 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/29 10:46:59 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/31 21:13:30 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-static int	ft_count_identifier(char **file_content, char *identifier)
+int	ft_count_identifier(char **file_content, char *identifier)
 {
 	int	i;
 	int	j;

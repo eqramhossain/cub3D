@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:37:05 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/29 19:05:31 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/31 21:54:51 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ int	ft_check_file(t_data *data)
 	return (SUCCESS);
 }
 
-// int	ft_check_map(t_data *data)
-// {
-// 	if (ft_is_map_last(data) == ERROR)
-// 		return (ft_error("map is not the last element"), ERROR);
-// 	if (ft_extract_map(data) == ERROR)
-// 		return (ERROR);
-// 	return (SUCCESS);
-// }
+int	ft_check_map(t_data *data)
+{
+	if (ft_is_map_last(data) == ERROR)
+		return (ft_error("map is not the last element"), ERROR);
+	if (ft_extract_map(data) == ERROR)
+		return (ERROR);
+	return (SUCCESS);
+}
 
 int	ft_parsing(t_data *data)
 {
@@ -44,7 +44,7 @@ int	ft_parsing(t_data *data)
 		return (ft_error("while initialising mlx server"), ERROR);
 	if (ft_check_file(data) == ERROR)
 		return (ERROR);
-	// if (ft_check_map(data) == ERROR)
-	// 	return (ERROR);
+	if (ft_check_map(data) == ERROR)
+		return (ERROR);
 	return (SUCCESS);
 }

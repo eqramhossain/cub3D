@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 11:07:35 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/30 20:48:26 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/31 21:08:45 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,5 @@ int	ft_init_mlx(t_data *data)
 	mlx_hook(data->win_ptr, 17, (1L << 17), ft_destroy_all, (void *)data);
 	mlx_hook(data->win_ptr, 2, (1L << 0), ft_press_handler, (void *)data);
 	mlx_hook(data->win_ptr, 3, (1L << 1), ft_release_handler, (void *)data);
-	mlx_loop(data->mlx_ptr);
 	return (SUCCESS);
 }

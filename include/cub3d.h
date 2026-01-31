@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/29 18:37:57 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/31 21:14:30 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,7 @@ int					ft_check_file(t_data *data);
 
 int					ft_check_all_texture_flag(t_data *data);
 int					ft_check_all_texture_file(t_data *data);
+int					ft_count_texture_flag(char **file_content, char *flag);
 char				*ft_find_texture_line(char **file_content,
 						char *identifier);
 
@@ -142,10 +143,13 @@ char				*ft_extract_texture_path(char *line, char *identifier);
 int					ft_store_all_texture_file(t_data *data);
 
 int					ft_check_floor_ceiling_flag(t_data *data);
+int					ft_count_identifier(char **file_content, char *identifier);
 int					ft_store_floor_ceiling_color(t_data *data);
 int					ft_is_rgb_valid(t_texture *texture);
 
 int					ft_check_map(t_data *data);
+int					ft_is_map_last(t_data *data);
+int					ft_extract_map(t_data *data);
 
 /* ========================================================================== */
 /*                             RAYCASTING                                     */

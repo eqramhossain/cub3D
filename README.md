@@ -13,7 +13,8 @@ valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins
 - [ ] map must be closed by walls 
 - [ ] Spaces are a valid part of the map and are up to you to handle.
 - [ ] map cannot be separated by newline
-- [ ]  
+- [ ] map must me valid use a flood fill to check if it is even possible go in all the area
+- [ ] 
 
 ##### Keyboard and mouse:
 - [x] left right arrow

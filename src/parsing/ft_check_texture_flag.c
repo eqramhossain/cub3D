@@ -6,13 +6,13 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 12:06:56 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/28 14:44:13 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/01/31 21:14:03 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-static int	ft_count_texture_flag(char **file_content, char *flag)
+int	ft_count_texture_flag(char **file_content, char *flag)
 {
 	int	i;
 	int	count;
