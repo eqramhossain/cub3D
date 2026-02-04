@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:37:05 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/31 22:02:33 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/04 16:10:27 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ int	ft_check_map(t_data *data)
 		return (ft_error("map is not the last element"), ERROR);
 	if (ft_extract_map(data) == ERROR)
 		return (ft_error("while extracting map from file"), ERROR);
+	if (ft_map_char_valid(data) == ERROR)
+		return (ft_error("unknown char found in map"), ERROR);
+	if (ft_map_closed(data) == ERROR)
+		return (ft_error("map must be closed/surrounded by walls"), ERROR);
+	// if (ft_map_valid(data) == ERROR)
+	// 	return (ft_error("map is not valid"), ERROR);
 	return (SUCCESS);
 }
 

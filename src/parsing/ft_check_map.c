@@ -6,11 +6,36 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:12:01 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/31 22:20:36 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/04 16:12:24 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
+
+int	ft_map_char_valid(t_data *data)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (data->map[i])
+	{
+		j = 0;
+		while (data->map[i][j])
+		{
+			if ((data->map[i][j] != ' ') && (data->map[i][j] != '0')
+				&& (data->map[i][j] != '1') && (data->map[i][j] != 'N')
+				&& (data->map[i][j] != 'S') && (data->map[i][j] != 'F')
+				&& (data->map[i][j] != 'W'))
+				return (ERROR);
+			if (data->map[i][j] == ' ')
+				(data->map[i][j] = '1');
+			j++;
+		}
+		i++;
+	}
+	return (SUCCESS);
+}
 
 static int	ft_find_flag(char *file_content, char *flag)
 {

@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/31 21:14:30 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/04 16:10:22 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ typedef struct s_texture
 	int				ceiling;
 	int				floor_tab[3];
 	int				ceiling_tab[3];
-	t_tex_helper	tex_helper;
+	t_tex_helper	*tex_helper;
 }					t_texture;
 
 typedef struct s_img
@@ -150,6 +150,8 @@ int					ft_is_rgb_valid(t_texture *texture);
 int					ft_check_map(t_data *data);
 int					ft_is_map_last(t_data *data);
 int					ft_extract_map(t_data *data);
+int					ft_map_char_valid(t_data *data);
+int					ft_map_closed(t_data *data);
 
 /* ========================================================================== */
 /*                             RAYCASTING                                     */

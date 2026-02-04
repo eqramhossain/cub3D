@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:02:48 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/31 22:22:34 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/04 12:32:39 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ static void	ft_free_file_content(char **file_content)
 	int	i;
 
 	i = 0;
+	if (!file_content)
+		return ;
 	while (file_content[i])
 	{
-		free(file_content[i]);
+		if (file_content[i])
+			free(file_content[i]);
 		i++;
 	}
 	free(file_content);
@@ -27,18 +30,22 @@ static void	ft_free_file_content(char **file_content)
 
 void	ft_free_texture(t_data *data)
 {
-	if (data->texture->tex_helper.no_wall)
-		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper.no_wall);
-	if (data->texture->tex_helper.so_wall)
-		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper.so_wall);
-	if (data->texture->tex_helper.ea_wall)
-		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper.ea_wall);
-	if (data->texture->tex_helper.we_wall)
-		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper.we_wall);
+	if (!data->texture || !data->texture->tex_helper)
+		return ;
+	if (data->texture->tex_helper->no_wall)
+		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper->no_wall);
+	if (data->texture->tex_helper->so_wall)
+		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper->so_wall);
+	if (data->texture->tex_helper->ea_wall)
+		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper->ea_wall);
+	if (data->texture->tex_helper->we_wall)
+		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper->we_wall);
 }
 
 void	ft_free_texture_path(t_data *data)
 {
+	if (!data->texture)
+		return ;
 	if (data->texture->no_texture)
 		free(data->texture->no_texture);
 	if (data->texture->so_texture)
@@ -56,14 +63,20 @@ void	ft_free_t_data(t_data *data)
 	ft_free_file_content(data->map); // map content
 	ft_free_texture_path(data);
 	ft_free_texture(data);
+	if (data->texture->tex_helper)
+		free(data->texture->tex_helper);
 	//
-	free(data->texture);
+	if (data->texture)
+		free(data->texture);
 	//
-	free(data->img);
+	if (data->img)
+		free(data->img);
 	//
-	free(data->player);
+	if (data->player)
+		free(data->player);
 	//
-	free(data->ray);
+	if (data->ray)
+		free(data->ray);
 	mlx_destroy_window(data->mlx_ptr, data->win_ptr);
 	mlx_destroy_display(data->mlx_ptr);
 	free(data->mlx_ptr);
