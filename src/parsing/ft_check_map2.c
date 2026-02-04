@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 16:12:45 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/04 16:42:36 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/04 16:49:35 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,20 +55,14 @@ static int	ft_up_bottom_check(t_data *data)
 static int	ft_side_check(t_data *data)
 {
 	int	i;
-	int	j;
 	int	line_len;
 
 	i = 0;
 	while (data->map[i])
 	{
-		j = 0;
-		while (data->map[i][j])
-		{
-			line_len = ft_strlen(data->map[i]);
-			if (data->map[i][0] != '1' && data->map[i][line_len - 1] != '1')
-				return (ERROR);
-			j++;
-		}
+		line_len = ft_strlen(data->map[i]);
+		if (data->map[i][0] != '1' || data->map[i][line_len - 1] != '1')
+			return (ERROR);
 		i++;
 	}
 	return (SUCCESS);

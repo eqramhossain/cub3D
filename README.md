@@ -15,7 +15,10 @@ valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins
     - while "spaces" "tab" "\n" continue until find a flag
     - if a flag is found then while "spaces" "tab" "\n" continue until the path to file is found
     - if path is found extract until the end of line "\n" and return; end
-- [ ] 
+- [ ] Extract every other information about player
+    - direction
+    - position
+    - plane
 
 ##### Map:
 - [x] Find the map if its the last thing in the map
@@ -28,8 +31,9 @@ valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins
 - [x] map cannot be separated by newline
     - if a newline is found return error unknown char is found
     - this is handled by default when i split at the beginning of the program.
-- [ ] map must be closed by walls 
+- [x] map must be closed by walls 
 - [ ] map must me valid use a flood fill to check if it is even possible go in all the area
+    - have to use a copy of map.
 - [ ] 
 
 ##### Keyboard and mouse:

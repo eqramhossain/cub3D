@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/04 16:10:22 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/04 16:58:55 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,7 @@ typedef struct s_data
 	char			**file_content;
 	char			*file_name;
 	char			**map;
+	char			**map_copy;
 	void			*mlx_ptr;
 	void			*win_ptr;
 	t_texture		*texture;
@@ -152,6 +153,7 @@ int					ft_is_map_last(t_data *data);
 int					ft_extract_map(t_data *data);
 int					ft_map_char_valid(t_data *data);
 int					ft_map_closed(t_data *data);
+int					ft_is_map_valid(t_data *data);
 
 /* ========================================================================== */
 /*                             RAYCASTING                                     */
