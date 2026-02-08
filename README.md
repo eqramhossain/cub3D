@@ -4,6 +4,56 @@ valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins
 
 ```
 
+### Direction Vector
+
+```
+        N (North)
+        dir = (0, -1)
+           ↑
+           |
+W ←--------+--------→ E
+(-1,0)     |      (1,0)
+           |
+           ↓
+        S (South)
+        dir = (0, 1)
+```
+
+
+```
+Direction  |  Movement Type      |  x (horizontal)  |  y (vertical)  |  Vector
+-----------|---------------------|------------------|----------------|----------
+North (N)  |  UP (smaller Y)     |  0 (no horiz.)   |  -1 (decrease) |  (0, -1)
+South (S)  |  DOWN (larger Y)    |  0 (no horiz.)   |  +1 (increase) |  (0, 1)
+East (E)   |  RIGHT (larger X)   |  +1 (increase)   |  0 (no vert.)  |  (1, 0)
+West (W)   |  LEFT (smaller X)   |  -1 (decrease)   |  0 (no vert.)  |  (-1, 0)
+```
+
+### Camera plane Vector
+
+The camera plane vector is perpendicular (90° rotated) to your direction vector!
+
+Your direction = where your nose points
+Your camera plane = a line across your eyes (left eye to right eye)
+The Rotation Math (90° rotation):
+
+If direction is (dir_x, dir_y), the perpendicular vector is (-dir_y, dir_x)
+
+The length of the plane vector controls the FOV(field of view)
+A value of 0.66 gives roughly a 66° field of view
+Larger value = wider FOV (fish-eye effect)
+Smaller value = narrower FOV (zoomed in)
+
+```
+Direction    dir_x  dir_y    →    plane_x   plane_y
+─────────────────────────────────────────────────────
+North (N)      0     -1     →      0.66       0
+South (S)      0      1     →     -0.66       0
+East (E)       1      0     →       0        0.66
+West (W)      -1      0     →       0       -0.66
+```
+
+
 #### TO DO:
 
 ##### Error Case Found:

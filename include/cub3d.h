@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/04 16:58:55 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/07 21:49:01 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ typedef struct s_ray
 
 typedef struct s_player
 {
-	char			dir;
+	char			dir_char;
 	double			pos_x;
 	double			pos_y;
 	double			dir_x;
@@ -154,6 +154,9 @@ int					ft_extract_map(t_data *data);
 int					ft_map_char_valid(t_data *data);
 int					ft_map_closed(t_data *data);
 int					ft_is_map_valid(t_data *data);
+
+void				ft_init_player(t_data *data);
+int					ft_extract_player_info(t_data *data);
 
 /* ========================================================================== */
 /*                             RAYCASTING                                     */
