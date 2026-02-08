@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:37:05 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/08 10:54:56 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/08 11:30:27 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,10 @@ int	ft_check_map(t_data *data)
 		return (ft_error("unknown char found in map"), ERROR);
 	if (ft_map_closed(data) == ERROR)
 		return (ft_error("map must be closed/surrounded by walls"), ERROR);
+	if (ft_extract_player_info(data) == ERROR)
+		return (ERROR);
+	if (ft_is_map_valid(data) == ERROR)
+		return (ERROR);
 	return (SUCCESS);
 }
 
@@ -49,10 +53,6 @@ int	ft_parsing(t_data *data)
 	if (ft_check_file(data) == ERROR)
 		return (ERROR);
 	if (ft_check_map(data) == ERROR)
-		return (ERROR);
-	if (ft_extract_player_info(data) == ERROR)
-		return (ERROR);
-	if (ft_is_map_valid(data) == ERROR)
 		return (ERROR);
 	return (SUCCESS);
 }
