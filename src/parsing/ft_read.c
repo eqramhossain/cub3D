@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 14:01:08 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/27 10:23:14 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/11 10:09:04 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_read(t_data *data)
 	line = get_next_line(fd);
 	if (!line)
 	{
-		ft_error("provided file is empty, please verify\n");
+		ft_error("provided file is empty, please verify");
 		close(fd);
 		return (NULL);
 	}

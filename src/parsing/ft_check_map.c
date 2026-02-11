@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:12:01 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/08 11:40:55 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/11 09:55:20 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_map_char_valid(t_data *data)
 		{
 			if ((data->map[i][j] != ' ') && (data->map[i][j] != '0')
 				&& (data->map[i][j] != '1') && (data->map[i][j] != 'N')
-				&& (data->map[i][j] != 'S') && (data->map[i][j] != 'F')
+				&& (data->map[i][j] != 'S') && (data->map[i][j] != 'E')
 				&& (data->map[i][j] != 'W'))
 				return (ERROR);
 			if (data->map[i][j] == ' ')

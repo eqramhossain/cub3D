@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:02:48 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/04 12:32:39 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/11 10:20:12 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,12 @@ void	ft_free_texture_path(t_data *data)
 
 void	ft_free_t_data(t_data *data)
 {
-	mlx_loop_end(data->mlx_ptr);
-	ft_free_file_content(data->file_content);
-	ft_free_file_content(data->map); // map content
+	if (data->mlx_ptr)
+		mlx_loop_end(data->mlx_ptr);
+	if (data->file_content)
+		ft_free_file_content(data->file_content);
+	if (data->map)
+		ft_free_file_content(data->map); // map content
 	ft_free_texture_path(data);
 	ft_free_texture(data);
 	if (data->texture->tex_helper)
@@ -77,7 +80,10 @@ void	ft_free_t_data(t_data *data)
 	//
 	if (data->ray)
 		free(data->ray);
-	mlx_destroy_window(data->mlx_ptr, data->win_ptr);
-	mlx_destroy_display(data->mlx_ptr);
-	free(data->mlx_ptr);
+	if (data->mlx_ptr)
+		mlx_destroy_window(data->mlx_ptr, data->win_ptr);
+	if (data->mlx_ptr)
+		mlx_destroy_display(data->mlx_ptr);
+	if (data->mlx_ptr)
+		free(data->mlx_ptr);
 }

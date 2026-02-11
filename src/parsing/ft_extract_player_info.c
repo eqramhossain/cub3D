@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 15:07:06 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/08 10:53:52 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/11 10:17:04 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ static int	ft_find_player_pos(t_data *data)
 {
 	int	i;
 	int	j;
+	int	count;
 
 	i = 0;
+	count = 0;
 	while (data->map[i])
 	{
 		j = 0;
@@ -29,13 +31,17 @@ static int	ft_find_player_pos(t_data *data)
 				data->player->dir_char = data->map[i][j];
 				data->player->pos_x = j + 0.5;
 				data->player->pos_y = i + 0.5;
-				return (SUCCESS);
+				count++;
 			}
+			else if (count > 1)
+				return (ft_error("player must only appear once"), ERROR);
 			j++;
 		}
 		i++;
 	}
-	return (ERROR);
+	if (count == 0)
+		return (ft_error("player not found"), ERROR);
+	return (SUCCESS);
 }
 
 static void	ft_init_player_dir_north_south(t_data *data)
