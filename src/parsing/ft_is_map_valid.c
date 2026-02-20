@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 16:58:19 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/09 17:16:36 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/02/20 09:06:44 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,5 @@ int	ft_is_map_valid(t_data *data)
 		return (ft_error("flood fill. map is not valid"), ERROR);
 	}
 	ft_free_map_copy(data);
-	return (SUCCESS);
 	return (SUCCESS);
 }
