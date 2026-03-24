@@ -33,9 +33,9 @@ West (W)   |  LEFT (smaller X)   |  -1 (decrease)   |  0 (no vert.)  |  (-1, 0)
 
 The camera plane vector is perpendicular (90° rotated) to your direction vector!
 
-Your direction = where your nose points
-Your camera plane = a line across your eyes (left eye to right eye)
-The Rotation Math (90° rotation):
+The direction is = where your nose points
+The camera plane is = a line across your eyes (left eye to right eye)
+The Rotation Math is = (90° rotation):
 
 If direction is (dir_x, dir_y), the perpendicular vector is (-dir_y, dir_x)
 
@@ -84,7 +84,6 @@ West (W)      -1      0     →       0       -0.66
 - [x] map must be closed by walls 
 - [ ] map must me valid use a flood fill to check if it is even possible go in all the area
     - have to use a copy of map.
-- [ ] 
 
 ##### Keyboard and mouse:
 - [x] left right arrow
