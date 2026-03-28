@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 19:51:31 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/11 10:18:49 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/26 01:00:23 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,29 @@ static int	ft_init_t_file(t_data *data)
 	return (SUCCESS);
 }
 
+void	ft_init_texture(t_texture *texture)
+{
+	texture->no_texture = NULL;
+	texture->so_texture = NULL;
+	texture->ea_texture = NULL;
+	texture->we_texture = NULL;
+	texture->tex_helper = malloc(1 * sizeof(t_tex_helper));
+	texture->tex_helper->no_wall = NULL;
+	texture->tex_helper->so_wall = NULL;
+	texture->tex_helper->ea_wall = NULL;
+	texture->tex_helper->we_wall = NULL;
+	texture->tex_helper->no_addr = NULL;
+	texture->tex_helper->so_addr = NULL;
+	texture->tex_helper->ea_addr = NULL;
+	texture->tex_helper->we_addr = NULL;
+}
+
+void	ft_init_img(t_img *img)
+{
+	img->img_ptr = NULL;
+	img->addr = NULL;
+}
+
 void	ft_init_struct(t_data *data)
 {
 	data->file_content = NULL;
@@ -65,11 +88,14 @@ void	ft_init_struct(t_data *data)
 	data->map = NULL;
 	data->mlx_ptr = NULL;
 	data->win_ptr = NULL;
-	data->texture = ft_calloc(1, sizeof(t_texture));
-	data->texture->tex_helper = ft_calloc(1, sizeof(t_tex_helper));
-	data->img = ft_calloc(1, sizeof(t_img));
-	data->player = ft_calloc(1, sizeof(t_player));
-	data->ray = ft_calloc(1, sizeof(t_ray));
+	data->win_width = WIN_WIDTH;
+	data->win_height = WIN_HEIGHT;
+	data->texture = malloc(1 * sizeof(t_texture));
+	ft_init_texture(data->texture);
+	data->img = malloc(1 * sizeof(t_img));
+	ft_init_img(data->img);
+	data->player = malloc(1 * sizeof(t_player));
+	data->ray = malloc(1 * sizeof(t_ray));
 }
 
 int	main(int ac, char **av)
@@ -84,6 +110,9 @@ int	main(int ac, char **av)
 		return (ft_free_t_data(&data), ERROR);
 	if (ft_parsing(&data) == ERROR)
 		return (ft_free_t_data(&data), ERROR);
+	if (ft_raycasting(&data) == ERROR)
+		return (ft_error("raycaster engine, leaks to implemented."), ERROR);
+	mlx_loop_hook(data.mlx_ptr, ft_rendering_frames, (void *)&data);
 	mlx_loop(data.mlx_ptr);
 	ft_free_t_data(&data);
 	return (SUCCESS);

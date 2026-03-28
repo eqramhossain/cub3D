@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 11:07:35 by ehossain          #+#    #+#             */
-/*   Updated: 2026/01/31 21:08:45 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/28 23:10:56 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,41 +24,45 @@ int	ft_destroy_all(void *param)
 
 int	ft_press_handler(int keycode, void *data)
 {
-	(void)data;
+	t_data	*tempo;
+
+	tempo = (t_data *)data;
 	if (keycode == ESC)
 		ft_destroy_all(data);
 	if (keycode == W)
-		printf("W pressed\n");
+		tempo->player->move_y = 1;
 	if (keycode == A)
-		printf("A pressed\n");
+		tempo->player->move_x = -1;
 	if (keycode == S)
-		printf("S pressed\n");
+		tempo->player->move_y = -1;
 	if (keycode == D)
-		printf("D pressed\n");
+		tempo->player->move_x = 1;
 	if (keycode == LEFT)
-		printf("LEFT pressed\n");
+		tempo->player->rotate -= 1;
 	if (keycode == RIGHT)
-		printf("RIGHT pressed\n");
+		tempo->player->rotate += 1;
 	return (0);
 }
 
 int	ft_release_handler(int keycode, void *data)
 {
-	(void)data;
+	t_data	*tempo;
+
+	tempo = (t_data *)data;
 	if (keycode == ESC)
 		ft_destroy_all(data);
-	if (keycode == W)
-		printf("W released\n");
-	if (keycode == A)
-		printf("A released\n");
-	if (keycode == S)
-		printf("S released\n");
-	if (keycode == D)
-		printf("D released\n");
-	if (keycode == LEFT)
-		printf("LEFT released\n");
-	if (keycode == RIGHT)
-		printf("RIGHT released\n");
+	if (keycode == W && tempo->player->move_y == 1)
+		tempo->player->move_y = 0;
+	if (keycode == A && tempo->player->move_x == -1)
+		tempo->player->move_x = 0;
+	if (keycode == S && tempo->player->move_y == -1)
+		tempo->player->move_y = 0;
+	if (keycode == D && tempo->player->move_x == 1)
+		tempo->player->move_x = 0;
+	if (keycode == LEFT && tempo->player->rotate == -1)
+		tempo->player->rotate = 0;
+	if (keycode == RIGHT && tempo->player->rotate == 1)
+		tempo->player->rotate = 0;
 	return (0);
 }
 

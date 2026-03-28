@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/07 21:49:01 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/28 23:34:19 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 # define LEFT 65361
 # define RIGHT 65363
 
-# define WIN_WIDTH 1920
-# define WIN_HEIGHT 1080
+# define WIN_WIDTH 2560
+# define WIN_HEIGHT 1440
 # define WALL_SIZE 64
 
 # define MOVE_SPEED 0.10
@@ -48,8 +48,37 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+typedef struct s_var
+{
+	int				start;
+	int				end;
+}					t_var;
+
 typedef struct s_ray
 {
+	double			camera;
+	double			raydir_x;
+	double			raydir_y;
+	double			delta_dist_x;
+	double			delta_dist_y;
+	double			side_dist_x;
+	double			side_dist_y;
+	double			wall_dist;
+	int				line_height;
+	int				draw_start;
+	int				draw_end;
+	int				color;
+	int				step_x;
+	int				step_y;
+	int				map_x;
+	int				map_y;
+	int				hit;
+	int				side;
+	double			wall_x;
+	int				tex_x;
+	int				tex_y;
+	double			step;
+	double			tex_pos;
 }					t_ray;
 
 typedef struct s_player
@@ -119,6 +148,10 @@ typedef struct s_data
 	char			*file_name;
 	char			**map;
 	char			**map_copy;
+	int				win_width;
+	int				win_height;
+	int				map_width;
+	int				map_height;
 	void			*mlx_ptr;
 	void			*win_ptr;
 	t_texture		*texture;
@@ -163,5 +196,14 @@ int					ft_extract_player_info(t_data *data);
 /* ========================================================================== */
 
 int					ft_init_mlx(t_data *data);
+int					ft_rendering_frames(void *data);
+int					ft_raycasting(t_data *data);
+int					ft_raycaster_engine(t_data *data);
+int					ft_map_height_width(t_data *data);
+int					ft_create_image_buffer(t_data *data);
+int					ft_move_player_pos(t_data *data);
+int					ft_is_a_valid_move(t_data *data, double new_x,
+						double new_y);
+int					ft_rotate_player(t_data *data, double rotdir);
 
 #endif

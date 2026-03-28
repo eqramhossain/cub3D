@@ -19,6 +19,14 @@ W ←--------+--------→ E
         dir = (0, 1)
 ```
 
+```
+| Letter | Direction         |
+| ------ | ----------------- |
+| `N`    | Facing up (y-)    |
+| `S`    | Facing down (y+)  |
+| `E`    | Facing right (x+) |
+| `W`    | Facing left (x-)  |
+```
 
 ```
 Direction  |  Movement Type      |  x (horizontal)  |  y (vertical)  |  Vector
@@ -28,6 +36,16 @@ South (S)  |  DOWN (larger Y)    |  0 (no horiz.)   |  +1 (increase) |  (0, 1)
 East (E)   |  RIGHT (larger X)   |  +1 (increase)   |  0 (no vert.)  |  (1, 0)
 West (W)   |  LEFT (smaller X)   |  -1 (decrease)   |  0 (no vert.)  |  (-1, 0)
 ```
+
+### Player data:
+```
+| Data                 | Purpose                                   |
+| -------------------- | ----------------------------------------- |
+| `x`, `y`             | Initial coordinates in the map            |
+| `dir_x`, `dir_y`     | Where the player is looking               |
+| `plane_x`, `plane_y` | Used for FOV in raycasting (camera width) |
+```
+
 
 ### Camera plane Vector
 
@@ -45,16 +63,36 @@ Larger value = wider FOV (fish-eye effect)
 Smaller value = narrower FOV (zoomed in)
 
 ```
-Direction    dir_x  dir_y    →    plane_x   plane_y
+Direction    dir_x  dir_y  arrow  plane_x   plane_y
 ─────────────────────────────────────────────────────
-North (N)      0     -1     →      0.66       0
-South (S)      0      1     →     -0.66       0
+North (N)      0     -1     ↑      0.66       0
+South (S)      0      1     ↓     -0.66       0
 East (E)       1      0     →       0        0.66
-West (W)      -1      0     →       0       -0.66
+West (W)      -1      0     ←       0       -0.66
 ```
 
+To calculate each ray’s direction:
+```
+rayDir = direction + cameraPlane * cameraX
+```
+
+Where:
+```
+direction = player direction vector
+cameraX = a value from -1 (left edge) to +1 (right edge)
+cameraPlane = left/right direction vector (FOV)
+```
+
+This means:
+```
+The leftmost ray = dir - plane
+The center ray = dir
+The rightmost ray = dir + plane
+```
 
 #### TO DO:
+
+- [ ] Img are not loaded in correctly.
 
 ##### Error Case Found:
 - [x] when file contains `NO\nfile.xpm` there is a segfault.
@@ -84,6 +122,8 @@ West (W)      -1      0     →       0       -0.66
 - [x] map must be closed by walls 
 - [ ] map must me valid use a flood fill to check if it is even possible go in all the area
     - have to use a copy of map.
+- [ ] When there is a tab `\t` error unknown char found in map.
+    - that should not occured cause `\t` is a valid char in map data.
 
 ##### Keyboard and mouse:
 - [x] left right arrow
@@ -91,4 +131,5 @@ West (W)      -1      0     →       0       -0.66
 - [x] click on the x of window close the window
 - [x] and the esc key
 - [x] no segfault or any memorey leak while exiting the program
+- [ ] The A and D key are not working properly.
 

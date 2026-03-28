@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_extract_player_info.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ekram <ekram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 15:07:06 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/11 10:17:04 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/28 22:36:50 by ekram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,10 @@ static void	ft_init_player_dir(t_data *data)
 		ft_init_player_dir_north_south(data);
 	if (data->player->dir_char == 'E' || data->player->dir_char == 'W')
 		ft_init_player_dir_east_west(data);
-	data->player->move_x = -1;
-	data->player->move_y = -1;
-	data->player->rotate = -1;
-	data->player->has_moved = -1;
+	data->player->move_x = 0;
+	data->player->move_y = 0;
+	data->player->rotate = 0;
+	data->player->has_moved = 0;
 }
 
 int	ft_extract_player_info(t_data *data)

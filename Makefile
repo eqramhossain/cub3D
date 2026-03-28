@@ -6,7 +6,7 @@
 #    By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 10:51:38 by ehossain          #+#    #+#              #
-#    Updated: 2026/02/07 17:41:18 by ehossain         ###   ########.fr        #
+#    Updated: 2026/03/25 07:35:16 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,11 @@ SRC_PARSING = ./src/main.c \
 
 
 SRC_RAYCAST = ./src/raycast/ft_init_mlx.c \
+			  ./src/raycast/ft_is_a_valid_move.c \
+			  ./src/raycast/ft_move_player_pos.c \
+			  ./src/raycast/ft_raycaster_engine.c \
+			  ./src/raycast/ft_raycasting.c \
+			  ./src/raycast/ft_rotate_player.c \
 
 SRC_ALL = $(SRC_PARSING) $(SRC_RAYCAST)
 
