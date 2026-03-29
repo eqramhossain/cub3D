@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 14:54:49 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/04 12:40:32 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 14:50:42 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ char	*ft_find_texture_line(char **file_content, char *identifier)
 	return (NULL);
 }
 
-// there might me some error edge cases regarding to if line is NULL or path is NULL
 int	ft_check_all_texture_file(t_data *data)
 {
 	char	*path;

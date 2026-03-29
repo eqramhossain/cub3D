@@ -6,34 +6,11 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/04 16:58:19 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/24 23:18:55 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 14:51:59 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
-
-static int	ft_copy_map(t_data *data)
-{
-	int	len;
-	int	i;
-
-	i = 0;
-	len = 0;
-	while (data->map[len])
-		len++;
-	data->map_copy = ft_calloc(len + 1, sizeof(char *));
-	if (!data->map_copy)
-		return (ERROR);
-	while (data->map[i])
-	{
-		data->map_copy[i] = ft_strdup(data->map[i]);
-		if (!data->map_copy[i])
-			return (ERROR);
-		i++;
-	}
-	data->map_copy[i] = NULL;
-	return (SUCCESS);
-}
 
 static int	ft_get_max_y(char **map)
 {

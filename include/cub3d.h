@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 13:41:41 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 14:59:46 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,6 +180,7 @@ int					ft_check_floor_ceiling_flag(t_data *data);
 int					ft_count_identifier(char **file_content, char *identifier);
 int					ft_store_floor_ceiling_color(t_data *data);
 int					ft_is_rgb_valid(t_texture *texture);
+int					ft_parse_rgb(char *color_str, int *rgb_array);
 
 int					ft_check_map(t_data *data);
 int					ft_is_map_last(t_data *data);
@@ -187,6 +188,7 @@ int					ft_extract_map(t_data *data);
 int					ft_map_char_valid(t_data *data);
 int					ft_map_closed(t_data *data);
 int					ft_is_map_valid(t_data *data);
+int					ft_copy_map(t_data *data);
 
 void				ft_init_player(t_data *data);
 int					ft_extract_player_info(t_data *data);

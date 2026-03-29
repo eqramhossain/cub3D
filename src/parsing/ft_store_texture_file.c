@@ -6,7 +6,7 @@
 /*   By: ekram <ekram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 22:10:16 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/28 22:21:13 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 15:01:23 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,27 +38,23 @@ static int	ft_load_textures_to_mlx(t_data *data)
 	return (SUCCESS);
 }
 
-static int	ft_load_addr(t_texture *texture)
+static int	ft_load_addr(t_tex_helper *tex_helper)
 {
-	texture->tex_helper->no_addr = mlx_get_data_addr(texture->tex_helper->no_wall,
-			&texture->tex_helper->no_bpp, &texture->tex_helper->no_line_len,
-			&texture->tex_helper->no_end);
-	if (!texture->tex_helper->no_addr)
+	tex_helper->no_addr = mlx_get_data_addr(tex_helper->no_wall,
+			&tex_helper->no_bpp, &tex_helper->no_line_len, &tex_helper->no_end);
+	if (!tex_helper->no_addr)
 		return (ft_error("failed to get NO texture address"), ERROR);
-	texture->tex_helper->so_addr = mlx_get_data_addr(texture->tex_helper->so_wall,
-			&texture->tex_helper->so_bpp, &texture->tex_helper->so_line_len,
-			&texture->tex_helper->so_end);
-	if (!texture->tex_helper->so_addr)
+	tex_helper->so_addr = mlx_get_data_addr(tex_helper->so_wall,
+			&tex_helper->so_bpp, &tex_helper->so_line_len, &tex_helper->so_end);
+	if (!tex_helper->so_addr)
 		return (ft_error("failed to get SO texture address"), ERROR);
-	texture->tex_helper->we_addr = mlx_get_data_addr(texture->tex_helper->we_wall,
-			&texture->tex_helper->we_bpp, &texture->tex_helper->we_line_len,
-			&texture->tex_helper->we_end);
-	if (!texture->tex_helper->we_addr)
+	tex_helper->we_addr = mlx_get_data_addr(tex_helper->we_wall,
+			&tex_helper->we_bpp, &tex_helper->we_line_len, &tex_helper->we_end);
+	if (!tex_helper->we_addr)
 		return (ft_error("failed to get WE texture address"), ERROR);
-	texture->tex_helper->ea_addr = mlx_get_data_addr(texture->tex_helper->ea_wall,
-			&texture->tex_helper->ea_bpp, &texture->tex_helper->ea_line_len,
-			&texture->tex_helper->ea_end);
-	if (!texture->tex_helper->ea_addr)
+	tex_helper->ea_addr = mlx_get_data_addr(tex_helper->ea_wall,
+			&tex_helper->ea_bpp, &tex_helper->ea_line_len, &tex_helper->ea_end);
+	if (!tex_helper->ea_addr)
 		return (ft_error("failed to get EA texture address"), ERROR);
 	return (SUCCESS);
 }
@@ -77,7 +73,7 @@ int	ft_store_all_texture_file(t_data *data)
 	data->texture->we_texture = ft_extract_texture_path(line, "WE");
 	if (ft_load_textures_to_mlx(data) == ERROR)
 		return (ERROR);
-	if (ft_load_addr(data->texture) == ERROR)
+	if (ft_load_addr(data->texture->tex_helper) == ERROR)
 		return (ERROR);
 	return (SUCCESS);
 }
