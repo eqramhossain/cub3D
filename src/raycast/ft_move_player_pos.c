@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 00:36:35 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/28 23:25:04 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 12:45:19 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	ft_move_left(t_data *data)
 	double	new_y;
 
 	new_x = data->player->pos_x - data->player->plane_x * MOVE_SPEED;
-	new_y = data->player->pos_y + data->player->plane_y * MOVE_SPEED;
+	new_y = data->player->pos_y - data->player->plane_y * MOVE_SPEED;
 	return (ft_is_a_valid_move(data, new_x, new_y));
 }
 
@@ -48,7 +48,7 @@ static int	ft_move_right(t_data *data)
 	double	new_y;
 
 	new_x = data->player->pos_x + data->player->plane_x * MOVE_SPEED;
-	new_y = data->player->pos_y - data->player->plane_y * MOVE_SPEED;
+	new_y = data->player->pos_y + data->player->plane_y * MOVE_SPEED;
 	return (ft_is_a_valid_move(data, new_x, new_y));
 }
 
