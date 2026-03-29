@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 12:19:16 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 13:41:41 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -190,6 +190,7 @@ int					ft_is_map_valid(t_data *data);
 
 void				ft_init_player(t_data *data);
 int					ft_extract_player_info(t_data *data);
+int					ft_find_player_pos(t_data *data);
 
 /* ========================================================================== */
 /*                             RAYCASTING                                     */

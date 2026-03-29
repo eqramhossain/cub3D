@@ -6,43 +6,11 @@
 /*   By: ekram <ekram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/07 15:07:06 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/28 22:36:50 by ekram            ###   ########.fr       */
+/*   Updated: 2026/03/29 13:41:43 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
-
-static int	ft_find_player_pos(t_data *data)
-{
-	int	i;
-	int	j;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (data->map[i])
-	{
-		j = 0;
-		while (data->map[i][j])
-		{
-			if ((data->map[i][j] == 'N') || (data->map[i][j] == 'S')
-				|| (data->map[i][j] == 'E') || (data->map[i][j] == 'W'))
-			{
-				data->player->dir_char = data->map[i][j];
-				data->player->pos_x = j + 0.5;
-				data->player->pos_y = i + 0.5;
-				count++;
-			}
-			else if (count > 1)
-				return (ft_error("player must only appear once"), ERROR);
-			j++;
-		}
-		i++;
-	}
-	if (count == 0)
-		return (ft_error("player not found"), ERROR);
-	return (SUCCESS);
-}
 
 static void	ft_init_player_dir_north_south(t_data *data)
 {

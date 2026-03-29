@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 19:51:31 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/26 01:00:23 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 13:29:51 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ static int	ft_init_t_file(t_data *data)
 
 	if (ft_check_file_extention(data->file_name) == ERROR)
 		return (ft_error("incorrect file extention"), ERROR);
-	if ((raw_file_content = ft_read(data)) == NULL)
+	raw_file_content = ft_read(data);
+	if (raw_file_content == NULL)
 		return (ERROR);
 	data->file_content = ft_split(raw_file_content, '\n');
 	free(raw_file_content);
