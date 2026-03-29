@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 00:44:00 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 15:49:06 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 16:44:32 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ int	ft_raycaster_engine(t_data *data)
 		ft_dda_algorithm(&ray, data);
 		ft_dda_algorithm_helper(&ray, data);
 		ft_calculate_height(&ray, data);
+		ft_calculate_texture(&ray, data);
 		ft_raycast_texture_walls(&ray, data, col);
 		col++;
 	}
