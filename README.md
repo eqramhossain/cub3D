@@ -120,10 +120,10 @@ The rightmost ray = dir + plane
     - if a newline is found return error unknown char is found
     - this is handled by default when i split at the beginning of the program.
 - [x] map must be closed by walls 
-- [ ] map must me valid use a flood fill to check if it is even possible go in all the area
+- [x] map must me valid use a flood fill to check if it is even possible go in all the area
     - have to use a copy of map.
-- [ ] When there is a tab `\t` error unknown char found in map.
-    - that should not occured cause `\t` is a valid char in map data.
+- [x] When there is a tab `\t` error unknown char found in map.
+    - that is normal cause `\t` are not a valid char for map.
 
 ##### Keyboard and mouse:
 - [x] left right arrow
@@ -131,5 +131,5 @@ The rightmost ray = dir + plane
 - [x] click on the x of window close the window
 - [x] and the esc key
 - [x] no segfault or any memorey leak while exiting the program
-- [ ] The A and D key are not working properly.
+- [x] The A and D key are not working properly.
 
