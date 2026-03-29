@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:02:48 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/11 10:20:12 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 15:21:16 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ void	ft_free_t_data(t_data *data)
 	if (data->texture)
 		free(data->texture);
 	//
+	if (data->img->img_ptr)
+		mlx_destroy_image(data->mlx_ptr, data->img->img_ptr);
 	if (data->img)
 		free(data->img);
 	//
