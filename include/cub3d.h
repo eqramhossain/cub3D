@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 14:59:46 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 15:49:01 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,6 +199,17 @@ int					ft_find_player_pos(t_data *data);
 /* ========================================================================== */
 
 int					ft_init_mlx(t_data *data);
+void				ft_initialize_t_ray(t_ray *ray);
+void				ft_mlx_pixel_put(t_data *data, int x, int y, int color);
+void				ft_draw_vertical_line(t_data *data, int x, t_var *var,
+						int color);
+void				ft_draw_ceiling(t_data *data, t_ray *ray, int col);
+void				ft_draw_floor(t_data *data, t_ray *ray, int col);
+void				ft_initialize_raycaster_engine(int col, t_ray *ray,
+						t_data *data);
+void				ft_calculate_texture(t_ray *ray, t_data *data);
+void				ft_get_textures_info(t_ray *ray, t_data *data, char **addr,
+						int *line_len);
 int					ft_rendering_frames(void *data);
 int					ft_raycasting(t_data *data);
 int					ft_raycaster_engine(t_data *data);

@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:02:48 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 15:21:16 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/29 15:51:14 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,10 @@ void	ft_free_texture(t_data *data)
 		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper->ea_wall);
 	if (data->texture->tex_helper->we_wall)
 		mlx_destroy_image(data->mlx_ptr, data->texture->tex_helper->we_wall);
+	if (data->texture->tex_helper)
+		free(data->texture->tex_helper);
+	if (data->texture)
+		free(data->texture);
 }
 
 void	ft_free_texture_path(t_data *data)
@@ -63,23 +67,15 @@ void	ft_free_t_data(t_data *data)
 	if (data->file_content)
 		ft_free_file_content(data->file_content);
 	if (data->map)
-		ft_free_file_content(data->map); // map content
+		ft_free_file_content(data->map);
 	ft_free_texture_path(data);
 	ft_free_texture(data);
-	if (data->texture->tex_helper)
-		free(data->texture->tex_helper);
-	//
-	if (data->texture)
-		free(data->texture);
-	//
 	if (data->img->img_ptr)
 		mlx_destroy_image(data->mlx_ptr, data->img->img_ptr);
 	if (data->img)
 		free(data->img);
-	//
 	if (data->player)
 		free(data->player);
-	//
 	if (data->ray)
 		free(data->ray);
 	if (data->mlx_ptr)

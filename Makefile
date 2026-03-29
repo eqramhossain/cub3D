@@ -6,7 +6,7 @@
 #    By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 10:51:38 by ehossain          #+#    #+#              #
-#    Updated: 2026/03/29 15:00:14 by ehossain         ###   ########.fr        #
+#    Updated: 2026/03/29 15:49:42 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,8 @@ SRC_RAYCAST = ./src/raycast/ft_init_mlx.c \
 			  ./src/raycast/ft_is_a_valid_move.c \
 			  ./src/raycast/ft_move_player_pos.c \
 			  ./src/raycast/ft_raycaster_engine.c \
+			  ./src/raycast/ft_raycaster_engine_helper_1.c \
+			  ./src/raycast/ft_raycaster_engine_helper_2.c \
 			  ./src/raycast/ft_raycasting.c \
 			  ./src/raycast/ft_rotate_player.c \
 
