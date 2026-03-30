@@ -6,7 +6,7 @@
 #    By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 10:51:38 by ehossain          #+#    #+#              #
-#    Updated: 2026/03/29 16:55:03 by ehossain         ###   ########.fr        #
+#    Updated: 2026/03/30 17:03:02 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,17 +69,17 @@ $(LIBFT):
 	@$(MAKE) -C $(LIBFT_DIR)
 
 ${LIB_MLX}:
-	@$(MAKE) -C ${DIR_MLX} > /dev/null 2>&1
+	make all -C ${DIR_MLX}
 
 clean :
 	@$(MAKE) clean -C ${LIBFT_DIR}
-	@$(MAKE) clean -C ${DIR_MLX}
+	make clean -C ${DIR_MLX}
 	@rm -f $(OBJ)
 	@echo "$(RED)cub3D object files removed$(END)"
 
 fclean :
 	@$(MAKE) fclean -C ${LIBFT_DIR}
-	@$(MAKE) clean -C ${DIR_MLX}
+	make clean -C ${DIR_MLX}
 	@rm -f $(OBJ)
 	@rm -f $(NAME)
 	@echo "$(RED)cub3D object files removed$(END)"
