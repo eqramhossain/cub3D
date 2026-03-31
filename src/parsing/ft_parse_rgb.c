@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 14:57:47 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 14:59:32 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/31 12:31:10 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	ft_parse_rgb(char *color_str, int *rgb_array)
 	{
 		if (split)
 			ft_free_split(split);
-		return (ft_error("RGB format must be R,G,B"), ERROR);
+		return (ft_error("RGB format must be R,G,B"), free(color_str), ERROR);
 	}
 	i = 0;
 	while (i < 3)
