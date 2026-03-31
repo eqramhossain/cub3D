@@ -1,3 +1,14 @@
+# This project has been created as part of the 42 curriculum by ehossain & roussada
+
+## Description
+
+### What is this project about ? 
+
+### Purpose and Goal
+
+### Instructions
+
+
 #### valgrind cmd
 ```
 valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes  ./cub3D maps/good/map.cub
@@ -90,46 +101,17 @@ The center ray = dir
 The rightmost ray = dir + plane
 ```
 
-#### TO DO:
 
-- [ ] Img are not loaded in correctly.
-
-##### Error Case Found:
-- [x] when file contains `NO\nfile.xpm` there is a segfault.
-    - saying stack overflow
-
-##### File:
-- [ ] Except for the map content, each type of element can be separated by one or more empty lines.
-    - while "spaces" "tab" "\n" continue until find a flag
-    - if a flag is found then while "spaces" "tab" "\n" continue until the path to file is found
-    - if path is found extract until the end of line "\n" and return; end
-- [ ] Extract every other information about player
-    - direction
-    - position
-    - plane
-
-##### Map:
-- [x] Find the map if its the last thing in the map
-- [x] Extract the map 
-- [x] map can only contains N E S W 0 1 
-- [x] tabs are not a valid char in map
-    - if found return error
-- [x] Spaces are a valid part of the map and are up to you to handle.
-    - spaces will be considered as walls "1" in map
-- [x] map cannot be separated by newline
-    - if a newline is found return error unknown char is found
-    - this is handled by default when i split at the beginning of the program.
-- [x] map must be closed by walls 
-- [x] map must me valid use a flood fill to check if it is even possible go in all the area
-    - have to use a copy of map.
-- [x] When there is a tab `\t` error unknown char found in map.
-    - that is normal cause `\t` are not a valid char for map.
-
-##### Keyboard and mouse:
-- [x] left right arrow
-- [x] W A S D keys hook
-- [x] click on the x of window close the window
-- [x] and the esc key
-- [x] no segfault or any memorey leak while exiting the program
-- [x] The A and D key are not working properly.
-
+| Ressources for cub3D                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------------- |
+| [subject.pdf](https://github.com/Ebuzzd42/cub3D/blob/main/references/en.subject.pdf)                                          |
+| [42 Docs](https://harm-smits.github.io/42docs/libs/minilibx/images.html)                                                      |
+| [Beginners guide to Desktop window system](https://www.youtube.com/playlist?list=PLTXMX1FE5Hj7JmR73CQDXkNq8OVn9_Z6F)          |
+| [Drawing with minilibx](https://www.youtube.com/watch?v=9eAPbNUQD1Y)                                                          |
+| [Introduction to minilibx](https://www.youtube.com/watch?v=bYS93r6U0zg)                                                       |
+| [Raycasting 1](https://lodev.org/cgtutor/raycasting.html)                                                                     |
+| [Raycasting 2](https://lodev.org/cgtutor/raycasting2.html)                                                                    |
+| [Raycasting 3](https://lodev.org/cgtutor/raycasting3.html)                                                                    |
+| [Raycasting 4](https://lodev.org/cgtutor/raycasting4.html)                                                                    |
+| [Make your own Raycaster Part 1](https://www.youtube.com/watch?v=PC1RaETIx3Y&list=PLAaI2BTdQ5UNqKyp-0qwGzsU7U2DmeQmA&index=1) |
+| [Make your own Raycaster Part 2](https://www.youtube.com/watch?v=PC1RaETIx3Y&list=PLAaI2BTdQ5UNqKyp-0qwGzsU7U2DmeQmA&index=1) |
