@@ -83,12 +83,6 @@ Example of a valid map:
 111111
 ```
 
-
-    Graphics Programming — You'll learn how 3D rendering actually works
-    File Parsing — You'll read and interpret configuration files
-    Game Loop — Real-time interactive graphics
-    Event Handling — Responding to keyboard and mouse input
-    Memory Management — Critical in C!
 Critical Rules for Maps:
 - MUST be completely surrounded by walls (1's on all edges)
 - Exactly ONE player position (N, S, E, or W)
@@ -189,6 +183,13 @@ The leftmost ray = dir - plane
 The center ray = dir
 The rightmost ray = dir + plane
 ```
+
+### To-Do
+- [ ] Bug 1
+    - if there is `NO					textures/north.xpm  .......` like this an invalid read occour
+- [ ] Bug 2
+    - if there is `\n` inside map area should return error.
+
 
 ### How was AI used in this project
 
