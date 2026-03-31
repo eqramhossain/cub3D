@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 10:37:05 by ehossain          #+#    #+#             */
-/*   Updated: 2026/02/08 11:30:27 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/03/31 12:50:26 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_check_file(t_data *data)
 int	ft_check_map(t_data *data)
 {
 	if (ft_is_map_last(data) == ERROR)
-		return (ft_error("map is not the last element"), ERROR);
+		return (ft_error("map is not valid"), ERROR);
 	if (ft_extract_map(data) == ERROR)
 		return (ft_error("while extracting map from file"), ERROR);
 	if (ft_map_char_valid(data) == ERROR)
