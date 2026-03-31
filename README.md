@@ -3,10 +3,99 @@
 ## Description
 
 ### What is this project about ? 
+cub3D is a 3D game using a first-person perspective — it is mimic the Wolfenstein 3D form the 90s.
 
-### Purpose and Goal
+The core technology used is called ray-casting. Well what is it?
+
+Ray-casting explained simply: Imagine you're standing in a maze looking forward. Instead of drawing the entire 3D world, we draw invisible lines (rays) from your eyes to the walls. We calculate where each ray hits a wall, how far away that wall is, and then we draw vertical lines on your screen — taller lines for closer walls, shorter lines for distant walls. When you put thousands of these lines side by side, you get the illusion of a complete 3D world! This is how games like Wolfenstein 3D (1992) worked.
+
+### Purpose
+The main purpose of this project is to get familiar with games and how 3d things works. Implementin Ray-casting algorithm. 
+
+Some Goals:
+- Graphics Programming — learning how 3D rendering actually works
+- File Parsing — how to read and interpret configuration files
+- Game Loop — Real-time interactive graphics
+- Event Handling — Responding to keyboard and mouse input using mlx (X11 window management)
+- Proper Memory Management
+
 
 ### Instructions
+How to run and create a valid map for cub3D
+
+#### Running the Program:
+
+```
+make                   # Compile everything
+./cub3D your_map.cub   # Run with your map file
+make clean             # Remove object files
+make fclean            # Remove everything (objects + executable)
+make re                # Rebuild everything
+```
+
+>[!note] The program must run with only one argument otherwise return error.
+
+#### Creating Your Map File (.cub)
+
+The .cub file has two main sections: Configuration and Map.
+
+Section 1: Configuration (order doesn't matter)
+
+```
+NO ./textures/north.xpm
+SO ./textures/south.xpm
+WE ./textures/west.xpm
+EA ./textures/east.xpm
+
+F 220,100,0
+C 225,30,0
+```
+
+
+Breaking this down:
+```
+NO = North wall texture file path
+SO = South wall texture file path
+WE = West wall texture file path
+EA = East wall texture file path
+F = Floor color in RGB format (Red, Green, Blue) — values 0-255
+C = Ceiling color in RGB format
+```
+
+Section 2: Map (MUST BE LAST, no reordering!)
+
+The map is a grid made of:
+
+    0 = Empty space (walkable)
+    1 = Wall (solid)
+    ' ' = Spaces (they are a valid part of the map)
+    N = Player starting position, facing North
+    S = Player starting position, facing South
+    E = Player starting position, facing East
+    W = Player starting position, facing West
+
+Example of a valid map:
+```
+111111
+100101
+101001
+1100N1
+111111
+```
+
+
+    Graphics Programming — You'll learn how 3D rendering actually works
+    File Parsing — You'll read and interpret configuration files
+    Game Loop — Real-time interactive graphics
+    Event Handling — Responding to keyboard and mouse input
+    Memory Management — Critical in C!
+Critical Rules for Maps:
+- MUST be completely surrounded by walls (1's on all edges)
+- Exactly ONE player position (N, S, E, or W)
+- Spaces ARE part of the map (you must handle them!) 
+- Must be the LAST element in your .cub file 
+- Can have empty lines before the map (for readability)
+
 
 
 #### valgrind cmd
@@ -100,6 +189,9 @@ The leftmost ray = dir - plane
 The center ray = dir
 The rightmost ray = dir + plane
 ```
+
+### How was AI used in this project
+
 
 
 | Ressources for cub3D                                                                                                          |
