@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 19:51:31 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 13:29:51 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/01 11:39:07 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,11 @@ static int	ft_init_t_file(t_data *data)
 	raw_file_content = ft_read(data);
 	if (raw_file_content == NULL)
 		return (ERROR);
+	// if all the flag found extract and hold.
+	// then continue until somthing are found until a end of file or encounter a '\n'
+	// then extract it too and hold
+	// then join these two
+	// then continue the program
 	data->file_content = ft_split(raw_file_content, '\n');
 	free(raw_file_content);
 	if (!data->file_content[0])
