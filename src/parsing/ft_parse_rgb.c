@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 14:57:47 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/02 11:52:48 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/02 12:13:33 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,10 @@ static int	ft_is_num(char *trimmed)
 	i = 0;
 	while (trimmed[i])
 	{
-		if (!(trimmed[i] < '0') || !(trimmed[i] > '9'))
+		printf("%c\n", trimmed[i]);
+		if (trimmed[i] < '0' || trimmed[i] > '9')
 			return (ft_error("ft_is_num"), ERROR);
+		// if error occur there are some leak to solve
 		i++;
 	}
 	return (SUCCESS);
