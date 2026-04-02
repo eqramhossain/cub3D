@@ -1,0 +1,1757 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/main.c",
+    "output": "/home/ekram/42/cub3D/src/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_error.o",
+      "src/parsing/ft_error.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_error.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_error.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_check_file_extention.o",
+      "src/parsing/ft_check_file_extention.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_check_file_extention.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_check_file_extention.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_read.o",
+      "src/parsing/ft_read.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_read.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_read.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_free_t_data.o",
+      "src/parsing/ft_free_t_data.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_free_t_data.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_free_t_data.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_parsing.o",
+      "src/parsing/ft_parsing.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_parsing.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_parsing.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_check_texture_flag.o",
+      "src/parsing/ft_check_texture_flag.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_check_texture_flag.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_check_texture_flag.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_check_texture_file.o",
+      "src/parsing/ft_check_texture_file.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_check_texture_file.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_check_texture_file.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_store_texture_file.o",
+      "src/parsing/ft_store_texture_file.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_store_texture_file.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_store_texture_file.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_check_fc_flag.o",
+      "src/parsing/ft_check_fc_flag.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_check_fc_flag.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_check_fc_flag.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_store_fc_color.o",
+      "src/parsing/ft_store_fc_color.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_store_fc_color.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_store_fc_color.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_is_rgb_valid.o",
+      "src/parsing/ft_is_rgb_valid.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_is_rgb_valid.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_is_rgb_valid.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_check_map.o",
+      "src/parsing/ft_check_map.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_check_map.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_check_map.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_check_map2.o",
+      "src/parsing/ft_check_map2.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_check_map2.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_check_map2.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_is_map_valid.o",
+      "src/parsing/ft_is_map_valid.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_is_map_valid.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_is_map_valid.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_extract_player_info.o",
+      "src/parsing/ft_extract_player_info.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_extract_player_info.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_extract_player_info.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_find_player_pos.o",
+      "src/parsing/ft_find_player_pos.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_find_player_pos.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_find_player_pos.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_copy_map.o",
+      "src/parsing/ft_copy_map.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_copy_map.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_copy_map.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/parsing/ft_parse_rgb.o",
+      "src/parsing/ft_parse_rgb.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/parsing/ft_parse_rgb.c",
+    "output": "/home/ekram/42/cub3D/src/parsing/ft_parse_rgb.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/raycast/ft_init_mlx.o",
+      "src/raycast/ft_init_mlx.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/raycast/ft_init_mlx.c",
+    "output": "/home/ekram/42/cub3D/src/raycast/ft_init_mlx.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/raycast/ft_is_a_valid_move.o",
+      "src/raycast/ft_is_a_valid_move.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/raycast/ft_is_a_valid_move.c",
+    "output": "/home/ekram/42/cub3D/src/raycast/ft_is_a_valid_move.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/raycast/ft_move_player_pos.o",
+      "src/raycast/ft_move_player_pos.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/raycast/ft_move_player_pos.c",
+    "output": "/home/ekram/42/cub3D/src/raycast/ft_move_player_pos.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/raycast/ft_raycaster_engine.o",
+      "src/raycast/ft_raycaster_engine.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/raycast/ft_raycaster_engine.c",
+    "output": "/home/ekram/42/cub3D/src/raycast/ft_raycaster_engine.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/raycast/ft_raycaster_engine_helper_1.o",
+      "src/raycast/ft_raycaster_engine_helper_1.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/raycast/ft_raycaster_engine_helper_1.c",
+    "output": "/home/ekram/42/cub3D/src/raycast/ft_raycaster_engine_helper_1.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/raycast/ft_raycaster_engine_helper_2.o",
+      "src/raycast/ft_raycaster_engine_helper_2.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/raycast/ft_raycaster_engine_helper_2.c",
+    "output": "/home/ekram/42/cub3D/src/raycast/ft_raycaster_engine_helper_2.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/raycast/ft_raycasting.o",
+      "src/raycast/ft_raycasting.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/raycast/ft_raycasting.c",
+    "output": "/home/ekram/42/cub3D/src/raycast/ft_raycasting.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-I./libft",
+      "-Iinclude",
+      "-I./minilibx-linux",
+      "-c",
+      "-g3",
+      "-o",
+      "src/raycast/ft_rotate_player.o",
+      "src/raycast/ft_rotate_player.c"
+    ],
+    "directory": "/home/ekram/42/cub3D",
+    "file": "/home/ekram/42/cub3D/src/raycast/ft_rotate_player.c",
+    "output": "/home/ekram/42/cub3D/src/raycast/ft_rotate_player.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_atoi.o",
+      "src/ft_atoi.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_atoi.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_atoi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_bzero.o",
+      "src/ft_bzero.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_bzero.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_bzero.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_calloc.o",
+      "src/ft_calloc.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_calloc.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_calloc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_isalnum.o",
+      "src/ft_isalnum.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_isalnum.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_isalnum.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_isalpha.o",
+      "src/ft_isalpha.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_isalpha.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_isalpha.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_isascii.o",
+      "src/ft_isascii.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_isascii.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_isascii.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_isdigit.o",
+      "src/ft_isdigit.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_isdigit.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_isdigit.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_isprint.o",
+      "src/ft_isprint.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_isprint.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_isprint.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_itoa.o",
+      "src/ft_itoa.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_itoa.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_itoa.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_memchr.o",
+      "src/ft_memchr.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_memchr.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_memchr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_memcmp.o",
+      "src/ft_memcmp.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_memcmp.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_memcmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_memcpy.o",
+      "src/ft_memcpy.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_memcpy.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_memcpy.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_memmove.o",
+      "src/ft_memmove.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_memmove.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_memmove.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_memset.o",
+      "src/ft_memset.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_memset.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_memset.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_putchar_fd.o",
+      "src/ft_putchar_fd.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_putchar_fd.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_putchar_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_putendl_fd.o",
+      "src/ft_putendl_fd.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_putendl_fd.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_putendl_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_putnbr_fd.o",
+      "src/ft_putnbr_fd.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_putnbr_fd.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_putnbr_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_putstr_fd.o",
+      "src/ft_putstr_fd.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_putstr_fd.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_putstr_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_split.o",
+      "src/ft_split.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_split.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_split.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strchr.o",
+      "src/ft_strchr.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strchr.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strchr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strdup.o",
+      "src/ft_strdup.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strdup.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strdup.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_striteri.o",
+      "src/ft_striteri.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_striteri.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_striteri.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strjoin.o",
+      "src/ft_strjoin.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strjoin.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strjoin.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strlcat.o",
+      "src/ft_strlcat.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strlcat.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strlcat.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strlcpy.o",
+      "src/ft_strlcpy.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strlcpy.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strlcpy.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strlen.o",
+      "src/ft_strlen.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strlen.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strlen.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strmapi.o",
+      "src/ft_strmapi.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strmapi.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strmapi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strncmp.o",
+      "src/ft_strncmp.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strncmp.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strncmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strnstr.o",
+      "src/ft_strnstr.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strnstr.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strnstr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strrchr.o",
+      "src/ft_strrchr.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strrchr.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strrchr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_strtrim.o",
+      "src/ft_strtrim.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_strtrim.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_strtrim.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_substr.o",
+      "src/ft_substr.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_substr.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_substr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_tolower.o",
+      "src/ft_tolower.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_tolower.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_tolower.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_toupper.o",
+      "src/ft_toupper.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_toupper.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_toupper.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/get_next_line/get_next_line.o",
+      "src/get_next_line/get_next_line.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/get_next_line/get_next_line.c",
+    "output": "/home/ekram/42/cub3D/libft/src/get_next_line/get_next_line.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/get_next_line/get_next_line_utils.o",
+      "src/get_next_line/get_next_line_utils.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/get_next_line/get_next_line_utils.c",
+    "output": "/home/ekram/42/cub3D/libft/src/get_next_line/get_next_line_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_printf/ft_printf.o",
+      "src/ft_printf/ft_printf.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_printf.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_printf.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_printf/ft_putdec.o",
+      "src/ft_printf/ft_putdec.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putdec.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putdec.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_printf/ft_putptr.o",
+      "src/ft_printf/ft_putptr.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putptr.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putptr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_printf/ft_putstr.o",
+      "src/ft_printf/ft_putstr.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putstr.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putstr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_printf/ft_putuns.o",
+      "src/ft_printf/ft_putuns.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putuns.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putuns.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_printf/ft_putchar.o",
+      "src/ft_printf/ft_putchar.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putchar.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_putchar.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_printf/ft_puthexa.o",
+      "src/ft_printf/ft_puthexa.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_puthexa.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_puthexa.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_printf/ft_find_format.o",
+      "src/ft_printf/ft_find_format.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_find_format.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_find_format.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "src/ft_printf/ft_number_size.o",
+      "src/ft_printf/ft_number_size.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/libft",
+    "file": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_number_size.c",
+    "output": "/home/ekram/42/cub3D/libft/src/ft_printf/ft_number_size.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_init.o",
+      "mlx_init.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_init.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_init.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_new_window.o",
+      "mlx_new_window.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_new_window.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_new_window.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_pixel_put.o",
+      "mlx_pixel_put.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_pixel_put.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_pixel_put.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_loop.o",
+      "mlx_loop.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_loop.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_loop.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_mouse_hook.o",
+      "mlx_mouse_hook.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_mouse_hook.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_mouse_hook.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_key_hook.o",
+      "mlx_key_hook.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_key_hook.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_key_hook.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_expose_hook.o",
+      "mlx_expose_hook.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_expose_hook.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_expose_hook.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_loop_hook.o",
+      "mlx_loop_hook.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_loop_hook.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_loop_hook.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_int_anti_resize_win.o",
+      "mlx_int_anti_resize_win.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_int_anti_resize_win.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_int_anti_resize_win.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_int_do_nothing.o",
+      "mlx_int_do_nothing.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_int_do_nothing.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_int_do_nothing.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_int_wait_first_expose.o",
+      "mlx_int_wait_first_expose.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_int_wait_first_expose.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_int_wait_first_expose.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_int_get_visual.o",
+      "mlx_int_get_visual.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_int_get_visual.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_int_get_visual.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_flush_event.o",
+      "mlx_flush_event.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_flush_event.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_flush_event.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_string_put.o",
+      "mlx_string_put.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_string_put.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_string_put.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_set_font.o",
+      "mlx_set_font.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_set_font.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_set_font.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_new_image.o",
+      "mlx_new_image.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_new_image.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_new_image.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_get_data_addr.o",
+      "mlx_get_data_addr.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_get_data_addr.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_get_data_addr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_put_image_to_window.o",
+      "mlx_put_image_to_window.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_put_image_to_window.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_put_image_to_window.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_get_color_value.o",
+      "mlx_get_color_value.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_get_color_value.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_get_color_value.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_clear_window.o",
+      "mlx_clear_window.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_clear_window.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_clear_window.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_xpm.o",
+      "mlx_xpm.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_xpm.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_xpm.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_int_str_to_wordtab.o",
+      "mlx_int_str_to_wordtab.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_int_str_to_wordtab.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_int_str_to_wordtab.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_destroy_window.o",
+      "mlx_destroy_window.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_destroy_window.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_destroy_window.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_int_param_event.o",
+      "mlx_int_param_event.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_int_param_event.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_int_param_event.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_int_set_win_event_mask.o",
+      "mlx_int_set_win_event_mask.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_int_set_win_event_mask.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_int_set_win_event_mask.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_hook.o",
+      "mlx_hook.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_hook.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_hook.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_rgb.o",
+      "mlx_rgb.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_rgb.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_rgb.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_destroy_image.o",
+      "mlx_destroy_image.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_destroy_image.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_destroy_image.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_mouse.o",
+      "mlx_mouse.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_mouse.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_mouse.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_screen_size.o",
+      "mlx_screen_size.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_screen_size.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_screen_size.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O3",
+      "-I/usr/include",
+      "-c",
+      "-o",
+      "obj/mlx_destroy_display.o",
+      "mlx_destroy_display.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/mlx_destroy_display.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/obj/mlx_destroy_display.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-I/usr/include",
+      "-O3",
+      "-I..",
+      "-g",
+      "-c",
+      "-o",
+      "main.o",
+      "main.c"
+    ],
+    "directory": "/home/ekram/42/cub3D/minilibx-linux/test",
+    "file": "/home/ekram/42/cub3D/minilibx-linux/test/main.c",
+    "output": "/home/ekram/42/cub3D/minilibx-linux/test/main.o"
+  }
+]

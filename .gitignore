@@ -3,7 +3,6 @@ cub3D
 *.o
 libft.a
 .cache/
-compile_commands.json
 
 /test/mlx-test
 

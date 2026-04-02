@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 14:57:47 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/31 12:31:10 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/02 11:52:48 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,20 @@ static int	ft_count_split(char **split)
 	return (count);
 }
 
+static int	ft_is_num(char *trimmed)
+{
+	int	i;
+
+	i = 0;
+	while (trimmed[i])
+	{
+		if (!(trimmed[i] < '0') || !(trimmed[i] > '9'))
+			return (ft_error("ft_is_num"), ERROR);
+		i++;
+	}
+	return (SUCCESS);
+}
+
 int	ft_parse_rgb(char *color_str, int *rgb_array)
 {
 	char	**split;
@@ -71,6 +85,8 @@ int	ft_parse_rgb(char *color_str, int *rgb_array)
 	while (i < 3)
 	{
 		trimmed = ft_trim_whitespace(split[i]);
+		if (ft_is_num(trimmed) == ERROR)
+			return (ERROR);
 		rgb_array[i] = ft_atoi(trimmed);
 		free(trimmed);
 		i++;
