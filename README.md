@@ -194,6 +194,9 @@ The rightmost ray = dir + plane
 - [ ] Bug 4 
     - map5 print the error msg of this `static int	ft_is_num(char *trimmed)` function. 
     - check all the return error function and error msg correctly
+- [ ] Bug 5
+    - if all the texture.xpm files as WALL_SIZE are not same sizes there is an segfault
+
 
 
 ### How was AI used in this project

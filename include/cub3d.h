@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 16:45:16 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/02 13:13:21 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 
 # define WIN_WIDTH 1980
 # define WIN_HEIGHT 1020
-# define WALL_SIZE 16
+# define WALL_SIZE 64
 
 # define MOVE_SPEED 0.10
 # define ROT_SPEED 0.015
