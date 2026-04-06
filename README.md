@@ -207,6 +207,8 @@ F asd             255,				    199					 ,          155
 F                 255,				    199					 ,          155 asd
 F                 255,		  asd	    199					 ,          155 
 ```
+- [ ] Bug 8
+    - in case of an unknown char is found in map does work but there is an invalid read
 
 
 
