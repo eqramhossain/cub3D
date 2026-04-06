@@ -199,6 +199,14 @@ The rightmost ray = dir + plane
 - [ ] Bug 6 
     - if floor or ceiling color has a `+` or `-` sign it has some memory leak
     - and does not print any error msg
+- [ ] Bug 7
+    - if floor or ceiling color is memory leak 
+    - and also does not print error msg
+```
+F asd             255,				    199					 ,          155
+F                 255,				    199					 ,          155 asd
+F                 255,		  asd	    199					 ,          155 
+```
 
 
 
