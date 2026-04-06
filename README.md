@@ -196,6 +196,9 @@ The rightmost ray = dir + plane
     - check all the return error function and error msg correctly
 - [ ] Bug 5
     - if all the texture.xpm files as WALL_SIZE are not same sizes there is an segfault
+- [ ] Bug 6 
+    - if floor or ceiling color has a `+` or `-` sign it has some memory leak
+    - and does not print any error msg
 
 
 
