@@ -209,7 +209,8 @@ F                 255,		  asd	    199					 ,          155
 ```
 - [ ] Bug 8
     - in case of an unknown char is found in map does work but there is an invalid read
-
+- [ ] Bug 9
+    - map12 problem is if there is something at the end of floor or ceiling color invalid read
 
 
 ### How was AI used in this project
