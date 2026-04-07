@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 15:47:14 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 15:49:03 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/07 12:48:01 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,30 @@
 
 void	ft_calculate_texture(t_ray *ray, t_data *data)
 {
+	int	tex_width;
+
 	if (ray->side == 0)
 		ray->wall_x = data->player->pos_y + ray->wall_dist * ray->raydir_y;
 	else
 		ray->wall_x = data->player->pos_x + ray->wall_dist * ray->raydir_x;
 	ray->wall_x = ray->wall_x - floor(ray->wall_x);
-	ray->tex_x = (int)(ray->wall_x * (double)(WALL_SIZE));
 	if (ray->side == 0 && ray->raydir_x > 0)
-		ray->tex_x = WALL_SIZE - ray->tex_x - 1;
+		tex_width = data->texture->tex_helper->ea_width;
+	else if (ray->side == 0 && ray->raydir_x < 0)
+		tex_width = data->texture->tex_helper->we_width;
+	else if (ray->side == 1 && ray->raydir_y > 0)
+		tex_width = data->texture->tex_helper->so_width;
+	else
+		tex_width = data->texture->tex_helper->no_width;
+	ray->tex_x = (int)(ray->wall_x * (double)tex_width);
+	if (ray->tex_x < 0)
+		ray->tex_x = 0;
+	if (ray->tex_x >= tex_width)
+		ray->tex_x = tex_width - 1;
+	if (ray->side == 0 && ray->raydir_x > 0)
+		ray->tex_x = tex_width - ray->tex_x - 1;
 	if (ray->side == 1 && ray->raydir_y < 0)
-		ray->tex_x = WALL_SIZE - ray->tex_x - 1;
+		ray->tex_x = tex_width - ray->tex_x - 1;
 }
 
 void	ft_get_textures_info(t_ray *ray, t_data *data, char **addr,

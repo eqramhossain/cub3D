@@ -6,7 +6,7 @@
 /*   By: ekram <ekram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 22:10:16 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 15:01:23 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/07 12:47:00 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,32 @@ static int	ft_load_textures_to_mlx(t_data *data)
 			data->texture->no_texture, &width, &height);
 	if (!data->texture->tex_helper->no_wall)
 		return (ft_error("failed to load NO texture"), ERROR);
+	data->texture->tex_helper->no_width = width;
+	data->texture->tex_helper->no_height = height;
+	width = WALL_SIZE;
+	height = WALL_SIZE;
 	data->texture->tex_helper->so_wall = mlx_xpm_file_to_image(data->mlx_ptr,
 			data->texture->so_texture, &width, &height);
 	if (!data->texture->tex_helper->so_wall)
 		return (ft_error("failed to load SO texture"), ERROR);
+	data->texture->tex_helper->so_width = width;
+	data->texture->tex_helper->so_height = height;
+	width = WALL_SIZE;
+	height = WALL_SIZE;
 	data->texture->tex_helper->we_wall = mlx_xpm_file_to_image(data->mlx_ptr,
 			data->texture->we_texture, &width, &height);
 	if (!data->texture->tex_helper->we_wall)
 		return (ft_error("failed to load WE texture"), ERROR);
+	data->texture->tex_helper->we_width = width;
+	data->texture->tex_helper->we_height = height;
+	width = WALL_SIZE;
+	height = WALL_SIZE;
 	data->texture->tex_helper->ea_wall = mlx_xpm_file_to_image(data->mlx_ptr,
 			data->texture->ea_texture, &width, &height);
 	if (!data->texture->tex_helper->ea_wall)
 		return (ft_error("failed to load EA texture"), ERROR);
+	data->texture->tex_helper->ea_width = width;
+	data->texture->tex_helper->ea_height = height;
 	return (SUCCESS);
 }
 

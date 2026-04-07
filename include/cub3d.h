@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/02 13:13:21 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/07 12:40:04 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,14 @@ typedef struct s_tex_helper
 	int				so_end;
 	int				we_end;
 	int				ea_end;
+	int				no_width;
+	int				no_height;
+	int				so_width;
+	int				so_height;
+	int				we_width;
+	int				we_height;
+	int				ea_width;
+	int				ea_height;
 }					t_tex_helper;
 
 typedef struct s_texture

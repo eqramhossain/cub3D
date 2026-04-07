@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 00:44:00 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/29 16:44:32 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/07 12:47:47 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,20 +92,44 @@ void	ft_raycast_texture_walls(t_ray *ray, t_data *data, int col)
 	int				y;
 	int				line_len;
 	char			*addr;
+	int				tex_height;
+	int				bpp;
 
 	color = 0;
 	ft_draw_ceiling(data, ray, col);
 	ft_get_textures_info(ray, data, &addr, &line_len);
-	ray->step = 1.0 * WALL_SIZE / ray->line_height;
+	if (ray->side == 0 && ray->raydir_x > 0)
+	{
+		tex_height = data->texture->tex_helper->ea_height;
+		bpp = data->texture->tex_helper->ea_bpp;
+	}
+	else if (ray->side == 0 && ray->raydir_x < 0)
+	{
+		tex_height = data->texture->tex_helper->we_height;
+		bpp = data->texture->tex_helper->we_bpp;
+	}
+	else if (ray->side == 1 && ray->raydir_y > 0)
+	{
+		tex_height = data->texture->tex_helper->so_height;
+		bpp = data->texture->tex_helper->so_bpp;
+	}
+	else
+	{
+		tex_height = data->texture->tex_helper->no_height;
+		bpp = data->texture->tex_helper->no_bpp;
+	}
+	ray->step = 1.0 * tex_height / ray->line_height;
 	ray->tex_pos = (ray->draw_start - data->win_height / 2 + ray->line_height
 			/ 2) * ray->step;
 	y = ray->draw_start;
 	while (y <= ray->draw_end)
 	{
-		ray->tex_y = (int)ray->tex_pos & (WALL_SIZE - 1);
+		ray->tex_y = (int)ray->tex_pos % tex_height;
+		if (ray->tex_y < 0)
+			ray->tex_y += tex_height;
 		ray->tex_pos = ray->tex_pos + ray->step;
 		color = *(unsigned int *)(addr + (ray->tex_y * line_len + ray->tex_x
-					* (data->texture->tex_helper->no_bpp / 8)));
+					* (bpp / 8)));
 		ft_mlx_pixel_put(data, col, y, color);
 		y++;
 	}
