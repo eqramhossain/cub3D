@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:12:01 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/07 15:57:57 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/07 16:06:07 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,24 +69,25 @@ int	ft_is_map_last(t_data *data)
 	count = 0;
 	while (i < 6)
 	{
-		if ((ft_find_flag(data->file_content[i], "NO") == ERROR)
-			|| (ft_find_flag(data->file_content[i], "SO") == ERROR)
-			|| (ft_find_flag(data->file_content[i], "EA") == ERROR)
-			|| (ft_find_flag(data->file_content[i], "WE") == ERROR)
-			|| (ft_find_flag(data->file_content[i], "F") == ERROR)
-			|| (ft_find_flag(data->file_content[i], "C") == ERROR))
-		{
-			return (ERROR);
-		}
-		else
+		if (ft_find_flag(data->file_content[i], "NO") == SUCCESS)
 			count++;
-		if (i == 5 && count != 6)
-			return (ERROR);
+		else if (ft_find_flag(data->file_content[i], "SO") == SUCCESS)
+			count++;
+		else if (ft_find_flag(data->file_content[i], "EA") == SUCCESS)
+			count++;
+		else if (ft_find_flag(data->file_content[i], "WE") == SUCCESS)
+			count++;
+		else if (ft_find_flag(data->file_content[i], "F") == SUCCESS)
+			count++;
+		else if (ft_find_flag(data->file_content[i], "C") == SUCCESS)
+			count++;
 		i++;
 	}
-	return (SUCCESS);
+	if (count == 6)
+		return (SUCCESS);
+	else
+		return (ERROR);
 }
-
 int	ft_extract_map(t_data *data)
 {
 	int	i;
