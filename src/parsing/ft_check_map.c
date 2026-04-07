@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:12:01 by ehossain          #+#    #+#             */
-/*   Updated: 2026/03/31 12:12:30 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/07 15:57:57 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,25 +63,23 @@ static int	ft_find_flag(char *file_content, char *flag)
 int	ft_is_map_last(t_data *data)
 {
 	int	i;
-	int	len;
 	int	count;
 
 	i = 0;
-	len = 0;
 	count = 0;
-	while (data->file_content[len])
-		len++;
 	while (i < 6)
 	{
-		if ((ft_find_flag(data->file_content[i], "NO") == SUCCESS)
-			|| (ft_find_flag(data->file_content[i], "SO") == SUCCESS)
-			|| (ft_find_flag(data->file_content[i], "EA") == SUCCESS)
-			|| (ft_find_flag(data->file_content[i], "WE") == SUCCESS)
-			|| (ft_find_flag(data->file_content[i], "F") == SUCCESS)
-			|| (ft_find_flag(data->file_content[i], "C") == SUCCESS))
+		if ((ft_find_flag(data->file_content[i], "NO") == ERROR)
+			|| (ft_find_flag(data->file_content[i], "SO") == ERROR)
+			|| (ft_find_flag(data->file_content[i], "EA") == ERROR)
+			|| (ft_find_flag(data->file_content[i], "WE") == ERROR)
+			|| (ft_find_flag(data->file_content[i], "F") == ERROR)
+			|| (ft_find_flag(data->file_content[i], "C") == ERROR))
 		{
-			count++;
+			return (ERROR);
 		}
+		else
+			count++;
 		if (i == 5 && count != 6)
 			return (ERROR);
 		i++;

@@ -197,7 +197,7 @@ The rightmost ray = dir + plane
     - check all the return error function and error msg correctly
 - [x] Bug 5
     - if all the texture.xpm files as WALL_SIZE are not same sizes there is an segfault
-- [ ] Bug 6 
+- [x] Bug 6 
     - if floor or ceiling color has a `+` or `-` sign it has some memory leak
     - and does not print any error msg
 - [ ] Bug 7
@@ -208,7 +208,7 @@ F asd             255,				    199					 ,          155
 F                 255,				    199					 ,          155 asd
 F                 255,		  asd	    199					 ,          155 
 ```
-- [ ] Bug 8
+- [x] Bug 8
     - in case of an unknown char is found in map does work but there is an invalid read
 - [ ] Bug 9
     - map12 problem is if there is something at the end of floor or ceiling color invalid read
