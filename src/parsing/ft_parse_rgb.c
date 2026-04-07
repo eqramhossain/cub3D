@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/29 14:57:47 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/02 12:24:39 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/07 15:28:10 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,8 @@ int	ft_parse_rgb(char *color_str, int *rgb_array)
 	{
 		trimmed = ft_trim_whitespace(split[i]);
 		if (ft_is_num(trimmed) == ERROR)
-			return (ERROR);
+			return (ft_free_split(split), free(trimmed), free(color_str),
+				ft_error("RGB format must be R,G,B"), ERROR);
 		rgb_array[i] = ft_atoi(trimmed);
 		free(trimmed);
 		i++;

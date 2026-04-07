@@ -185,16 +185,17 @@ The rightmost ray = dir + plane
 ```
 
 ### To-Do
-- [ ] Bug 1
+- [x] Bug 1
     - if there is `NO					textures/north.xpm  .......` like this an invalid read occour
-- [ ] Bug 2
+- [x] Bug 2
     - if there is `\n` inside map area should return error.
-- [ ] Bug 3 
+    - it is normal cause `\n` is not a valid char to be found in map
+- [x] Bug 3 
     - map4 when `static int	ft_is_num(char *trimmed)` this function fail there are some memory leak.
-- [ ] Bug 4 
+- [x] Bug 4 
     - map5 print the error msg of this `static int	ft_is_num(char *trimmed)` function. 
     - check all the return error function and error msg correctly
-- [ ] Bug 5
+- [x] Bug 5
     - if all the texture.xpm files as WALL_SIZE are not same sizes there is an segfault
 - [ ] Bug 6 
     - if floor or ceiling color has a `+` or `-` sign it has some memory leak
