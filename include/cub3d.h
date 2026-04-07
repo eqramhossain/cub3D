@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ekram <ekram@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/02 13:13:21 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/07 11:45:48 by ekram            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,10 @@ typedef struct s_ray
 	int				tex_y;
 	double			step;
 	double			tex_pos;
+	int             tex_width;      
+    int             tex_height;
+    char            *tex_addr;
+    int             tex_line_len;
 }					t_ray;
 
 typedef struct s_player
@@ -126,6 +130,14 @@ typedef struct s_texture
 	char			*so_texture;
 	char			*ea_texture;
 	char			*we_texture;
+	int				no_width;
+	int				no_height;
+	int				so_width;
+	int				so_height;
+	int				we_height;
+	int				we_width;
+	int				ea_width;
+	int				ea_height;
 	int				floor;
 	int				ceiling;
 	int				floor_tab[3];
