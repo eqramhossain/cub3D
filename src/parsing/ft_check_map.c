@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/31 19:12:01 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/09 07:51:21 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/09 09:05:20 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ int	ft_is_map_last(t_data *data)
 	else
 		return (ERROR);
 }
+
 int	ft_extract_map(t_data *data)
 {
 	int	i;

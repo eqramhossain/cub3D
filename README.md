@@ -187,7 +187,7 @@ The rightmost ray = dir + plane
 ### To-Do
 - [x] Bug 1
     - if there is `NO					textures/north.xpm  .......` like this an invalid read occour
-- [x] Bug 2
+- [ ] Bug 2
     - if there is `\n` inside map area should return error.
     - it is normal cause `\n` is not a valid char to be found in map
 - [x] Bug 3 

@@ -6,42 +6,21 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 19:51:31 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/01 11:39:07 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/09 08:01:03 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
 
-// static void	ft_print_file_content(char **file_content)
-// {
-// 	int	i;
-//
-// 	i = 0;
-// 	while (file_content[i])
-// 	{
-// 		printf("%s\n", file_content[i]);
-// 		i++;
-// 	}
-// }
-// static void	ft_print_data(t_data *data)
-// {
-// 	printf("\n");
-// 	printf("\n");
-// 	printf("\n");
-// 	printf("data->texture->no_texture = %s\n", data->texture->no_texture);
-// 	printf("data->texture->no_texture = %s\n", data->texture->so_texture);
-// 	printf("data->texture->no_texture = %s\n", data->texture->ea_texture);
-// 	printf("data->texture->no_texture = %s\n", data->texture->we_texture);
-// 	for (int i = 0; i < 3; i++)
-// 		printf("data->texture->floor_tab[i] = %d\n",
-// 			data->texture->floor_tab[i]);
-// 	for (int i = 0; i < 3; i++)
-// 		printf("data->texture->ceiling_tab[i] = %d\n",
-// 			data->texture->ceiling_tab[i]);
-// 	printf("data->texture->floor = %d\n", data->texture->floor);
-// 	printf("data->texture->ceiling = %d\n", data->texture->ceiling);
-// 	ft_print_file_content(data->map);
-// }
+// this is because if in case of there is an '\n'
+// in map area this should not work
+/* if all the flag found extract and hold
+ * before the ft_split
+	// then continue until somthing are found
+	// until a end of file or encounter a '\n'
+	// then extract it too and hold
+	// then join these two
+	// then continue the program */
 
 static int	ft_init_t_file(t_data *data)
 {
@@ -52,11 +31,6 @@ static int	ft_init_t_file(t_data *data)
 	raw_file_content = ft_read(data);
 	if (raw_file_content == NULL)
 		return (ERROR);
-	// if all the flag found extract and hold.
-	// then continue until somthing are found until a end of file or encounter a '\n'
-	// then extract it too and hold
-	// then join these two
-	// then continue the program
 	data->file_content = ft_split(raw_file_content, '\n');
 	free(raw_file_content);
 	if (!data->file_content[0])

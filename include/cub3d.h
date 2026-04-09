@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/07 12:40:04 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/09 09:18:01 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 
 # define WIN_WIDTH 1980
 # define WIN_HEIGHT 1020
-# define WALL_SIZE 64
 
 # define MOVE_SPEED 0.10
 # define ROT_SPEED 0.015
@@ -53,6 +52,16 @@ typedef struct s_var
 	int				start;
 	int				end;
 }					t_var;
+
+typedef struct s_wall
+{
+	unsigned int	color;
+	int				y;
+	int				line_len;
+	char			*addr;
+	int				tex_height;
+	int				bpp;
+}					t_wall;
 
 typedef struct s_ray
 {
@@ -220,6 +229,10 @@ void				ft_get_textures_info(t_ray *ray, t_data *data, char **addr,
 						int *line_len);
 int					ft_rendering_frames(void *data);
 int					ft_raycasting(t_data *data);
+void				ft_dda_algorithm(t_ray *ray, t_data *data);
+void				ft_dda_algorithm_helper(t_ray *ray, t_data *data);
+void				ft_calculate_height(t_ray *ray, t_data *data);
+void				ft_raycast_texture_walls(t_ray *ray, t_data *data, int col);
 int					ft_raycaster_engine(t_data *data);
 int					ft_map_height_width(t_data *data);
 int					ft_create_image_buffer(t_data *data);

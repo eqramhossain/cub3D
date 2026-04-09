@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 00:44:00 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/07 12:47:47 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/09 09:16:04 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,71 +86,52 @@ void	ft_calculate_height(t_ray *ray, t_data *data)
 		ray->draw_end = data->win_height - 1;
 }
 
-void	ft_raycast_texture_walls(t_ray *ray, t_data *data, int col)
+void	ft_get_side(t_ray *ray, t_data *data, t_wall *wall)
 {
-	unsigned int	color;
-	int				y;
-	int				line_len;
-	char			*addr;
-	int				tex_height;
-	int				bpp;
-
-	color = 0;
-	ft_draw_ceiling(data, ray, col);
-	ft_get_textures_info(ray, data, &addr, &line_len);
 	if (ray->side == 0 && ray->raydir_x > 0)
 	{
-		tex_height = data->texture->tex_helper->ea_height;
-		bpp = data->texture->tex_helper->ea_bpp;
+		wall->tex_height = data->texture->tex_helper->ea_height;
+		wall->bpp = data->texture->tex_helper->ea_bpp;
 	}
 	else if (ray->side == 0 && ray->raydir_x < 0)
 	{
-		tex_height = data->texture->tex_helper->we_height;
-		bpp = data->texture->tex_helper->we_bpp;
+		wall->tex_height = data->texture->tex_helper->we_height;
+		wall->bpp = data->texture->tex_helper->we_bpp;
 	}
 	else if (ray->side == 1 && ray->raydir_y > 0)
 	{
-		tex_height = data->texture->tex_helper->so_height;
-		bpp = data->texture->tex_helper->so_bpp;
+		wall->tex_height = data->texture->tex_helper->so_height;
+		wall->bpp = data->texture->tex_helper->so_bpp;
 	}
 	else
 	{
-		tex_height = data->texture->tex_helper->no_height;
-		bpp = data->texture->tex_helper->no_bpp;
+		wall->tex_height = data->texture->tex_helper->no_height;
+		wall->bpp = data->texture->tex_helper->no_bpp;
 	}
-	ray->step = 1.0 * tex_height / ray->line_height;
-	ray->tex_pos = (ray->draw_start - data->win_height / 2 + ray->line_height
-			/ 2) * ray->step;
-	y = ray->draw_start;
-	while (y <= ray->draw_end)
-	{
-		ray->tex_y = (int)ray->tex_pos % tex_height;
-		if (ray->tex_y < 0)
-			ray->tex_y += tex_height;
-		ray->tex_pos = ray->tex_pos + ray->step;
-		color = *(unsigned int *)(addr + (ray->tex_y * line_len + ray->tex_x
-					* (bpp / 8)));
-		ft_mlx_pixel_put(data, col, y, color);
-		y++;
-	}
-	ft_draw_floor(data, ray, col);
 }
 
-int	ft_raycaster_engine(t_data *data)
+void	ft_raycast_texture_walls(t_ray *ray, t_data *data, int col)
 {
-	t_ray	ray;
-	int		col;
+	t_wall	wall;
 
-	col = 0;
-	while (col < data->win_width)
+	wall.color = 0;
+	ft_draw_ceiling(data, ray, col);
+	ft_get_textures_info(ray, data, &wall.addr, &wall.line_len);
+	ft_get_side(ray, data, &wall);
+	ray->step = 1.0 * wall.tex_height / ray->line_height;
+	ray->tex_pos = (ray->draw_start - data->win_height / 2 + ray->line_height
+			/ 2) * ray->step;
+	wall.y = ray->draw_start;
+	while (wall.y <= ray->draw_end)
 	{
-		ft_initialize_raycaster_engine(col, &ray, data);
-		ft_dda_algorithm(&ray, data);
-		ft_dda_algorithm_helper(&ray, data);
-		ft_calculate_height(&ray, data);
-		ft_calculate_texture(&ray, data);
-		ft_raycast_texture_walls(&ray, data, col);
-		col++;
+		ray->tex_y = (int)ray->tex_pos % wall.tex_height;
+		if (ray->tex_y < 0)
+			ray->tex_y += wall.tex_height;
+		ray->tex_pos = ray->tex_pos + ray->step;
+		wall.color = *(unsigned int *)(wall.addr + (ray->tex_y * wall.line_len
+					+ ray->tex_x * (wall.bpp / 8)));
+		ft_mlx_pixel_put(data, col, wall.y, wall.color);
+		wall.y++;
 	}
-	return (SUCCESS);
+	ft_draw_floor(data, ray, col);
 }
