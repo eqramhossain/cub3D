@@ -200,7 +200,7 @@ The rightmost ray = dir + plane
 - [x] Bug 6 
     - if floor or ceiling color has a `+` or `-` sign it has some memory leak
     - and does not print any error msg
-- [ ] Bug 7
+- [x] Bug 7
     - if floor or ceiling color is memory leak 
     - and also does not print error msg
 ```
@@ -210,8 +210,9 @@ F                 255,		  asd	    199					 ,          155
 ```
 - [x] Bug 8
     - in case of an unknown char is found in map does work but there is an invalid read
-- [ ] Bug 9
+- [x] Bug 9
     - map12 problem is if there is something at the end of floor or ceiling color invalid read
+    - this is a extreme edge case it occour only when there is a ` ` space or multiple spaces at the of the line. otherwise it works perfectly.
 
 
 ### How was AI used in this project

@@ -1,5 +1,5 @@
 
-NO					textures/brick5.xpm alskdj
+NO					textures/brick5.xpm
 
 
 
@@ -8,7 +8,8 @@ NO					textures/brick5.xpm alskdj
 
 WE                           textures/brownstone10.xpm
 
-F              255,				    199					 ,          155 
+
+F              255,				    199					 ,          155                    
 
 
 
@@ -27,7 +28,6 @@ SO									textures/bunker_door.xpm
 
 11111
 10001
-10X01
+10N01
 10001
 11111
-
