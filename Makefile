@@ -6,7 +6,7 @@
 #    By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 10:51:38 by ehossain          #+#    #+#              #
-#    Updated: 2026/04/09 09:19:01 by ehossain         ###   ########.fr        #
+#    Updated: 2026/04/27 16:02:01 by ehossain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,8 @@ SRC_PARSING = ./src/main.c \
 			  ./src/parsing/ft_find_player_pos.c \
 			  ./src/parsing/ft_copy_map.c \
 			  ./src/parsing/ft_parse_rgb.c \
+			  ./src/map_new_line/ft_map_new_line.c \
+
 
 
 SRC_RAYCAST = ./src/raycast/ft_init_mlx.c \

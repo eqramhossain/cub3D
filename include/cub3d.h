@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:49:50 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/09 09:18:01 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:27:57 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,6 +176,8 @@ typedef struct s_data
 	t_img			*img;
 	t_ray			*ray;
 }					t_data;
+
+int					ft_map_new_line(char *raw_file_content);
 
 void				ft_error(char *str);
 int					ft_check_file_extention(char *file_name);
