@@ -6,7 +6,7 @@
 /*   By: ehossain <ehossain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 15:36:40 by ehossain          #+#    #+#             */
-/*   Updated: 2026/04/27 19:16:53 by ehossain         ###   ########.fr       */
+/*   Updated: 2026/04/27 19:25:30 by ehossain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ int	ft_map_new_line(char *raw_file_content)
 	var = ft_get_start_end(raw_file_content, i);
 	while (var.start < var.end)
 	{
-		if (raw_file_content[var.start] == '\n' && raw_file_content[var.start
-			+ 1] == '\n')
+		if (raw_file_content[var.start] == '\n'\
+			&& raw_file_content[var.start + 1] == '\n')
 			return (ft_error("new line found in map area"), ERROR);
 		var.start++;
 	}
